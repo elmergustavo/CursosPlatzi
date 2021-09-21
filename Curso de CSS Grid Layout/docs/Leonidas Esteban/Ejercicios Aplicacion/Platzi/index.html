@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PLatzi</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'lato', sans-serif;
+        margin: 0;
+    }
+    .hero {
+        background: #23475b;
+        color: white;
+        padding: 32px 15px;
+        display: grid;
+        grid-template-columns: minmax(auto, 1024px);
+        justify-content: center;
+    }
+    .hero-container {
+        display: grid;
+        
+        grid-template-columns: 70px 1fr 320px;
+        grid-template-areas: "badge title form"
+                             ". description form"
+                             ". countdown form";
+        grid-gap: 10px;
+    }
+    .badge {
+        grid-area: badge;
+    }
+    .badge img {
+        max-width: 70px;
+    }
+    .titulo {
+        grid-area: title;
+        font-size: 36px;
+        font-weight: normal;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .form {
+        grid-area: form;
+        text-align: center;
+        background: rgba(255, 255, 255, .9);
+        padding: 1.5em;
+        border-radius: 10px;
+    }
+    .form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #dbdbe2;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    .form p {
+        font-size: 20px;
+        color: #3a3b3f;
+        margin-bottom: 1em;
+    }
+    .form button {
+        background: #98ca3f;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        border-bottom: 5px solid #6d932b;
+        display: inline-block;
+    }
+    .countdown {
+        grid-area: countdown;
+    }
+    .countdown p {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300;
+    }
+    .countdown span {
+        font-size: 33px;
+    }
+    .countdown span::after {
+        content: ":";
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .countdown span:last-child:after {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+    }
+    .description {
+        grid-area: description;
+        text-align: justify;
+    }
+
+    @media screen and (max-width: 768px){
+        .hero-container {
+            display: grid;
+            grid-template-columns: 70px 1fr ;
+            grid-template-areas: "badge title"
+                                "description description"
+                                "form form"
+                                "countdown countdown ";
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-container">
+            <div class="badge">
+                <img src="badge.png" alt="">
+            </div>
+            <h1 class="title">
+                Curso de React.js
+            </h1>
+            <div class="description">
+                <p>React es una de las librerias mas utilizadas hoy en dia para crear aplicacione web.
+                    En este curso podras dominar la creacion de aplicaciones a traves de un proyecto 
+                    que te ayudara a explorar todas las capacidades de esta librería.
+                </p>
+            </div>
+            <form action="" class="form">
+                <p>Regístrate a Platzi</p>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo Electónico">
+                <button type="submit">Comienza ahora</button>
+            </form>
+            <div class="countdown">
+                <p>Lanzamiento:</p>
+                <p>
+                    <span>01d</span>
+                    <span>03h</span>
+                    <span>09m</span>
+                    <span>05s</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

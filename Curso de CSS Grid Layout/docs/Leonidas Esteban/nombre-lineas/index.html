@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Row</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 
+                    [inicio] 1fr 
+                    [linea2] 1fr 
+                    [linea3] 1fr 
+                    [destacado-end] 1fr 
+                    [linea5]1fr 
+                    [destacado2-end]1fr 
+                    [linea7]1fr[final];
+            
+            grid-template-rows:
+                    [inicio] 200px 
+                    [inicio2] 200px [final];
+            
+            grid-gap: 5px;
+            height: 100vh;
+        }
+
+        .item {
+            background: lightblue;
+            padding: 10px;
+            border: .1px solid blue;
+            /* margin-right: 10px; */
+            /* margin-bottom: 10px; */
+        }
+
+        .item:nth-of-type(1) {
+            /* grid-column-start: En que linea del grid inicia;  */
+            /* grid-column-start: 1;  */
+            /* grid-column-end: En que linea del grid termina; */
+            /* grid-column-end: 3; */
+            /* grid-column: 1 / span 3; 
+            grid-row: 1 /span 2; */
+            grid-column: inicio / destacado-end;
+            grid-row: inicio / final;
+        }
+        .item:nth-of-type(2) {
+            /* grid-column: 4 / span 2; 
+            grid-row: 1 /span 2; */
+             grid-column: destacado-end / destacado2-end;
+            grid-row: inicio / final;
+        }
+        .item:nth-of-type(3) {
+            /* grid-column: 6 / span 2;  */
+            grid-column: destacado2-end / final
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+    </section>
+</body>
+</html>

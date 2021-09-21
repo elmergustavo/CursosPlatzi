@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alineando Contenido</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-gap: 5px;
+            height: 100vh;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(4, 100px);
+
+            /* justify-content: start end center stretch space-around space-between space-evenly; */
+            justify-content:center;
+            /* align-content: start end center stretch space-around space-between space-evenly; */
+            align-content: center;
+
+            /* justify-items: start end center stretch; */
+            /* justify-items: center; */
+            /* align-items: start end center stretch; */
+            /* align-items: center; */
+        }
+
+        .item {
+            background: lightblue;
+            padding: 10px;
+            border: .1px solid blue;
+            /* margin-right: 10px; */
+            /* margin-bottom: 10px; */
+        }
+
+        .item:nth-of-type(5){
+            /* align-self: start; */
+            /* justify-self: start; */
+        }
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
+    </section>
+</body>
+</html>

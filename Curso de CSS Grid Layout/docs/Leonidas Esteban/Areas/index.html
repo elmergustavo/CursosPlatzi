@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gap</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            /* grid-template-columns:  25% 50% 20%;
+            grid-template-rows:  200px 200px; */
+            /* grid-template:  filas / columnas; */
+            /* grid-template:  300px 100px 100px / 1fr 1fr 1fr; */
+            /* grid-template:  300px 100px 100px / auto auto auto; */
+            /* grid-template:  300px 100px 100px / repeat(4, 1fr); */
+            /* grid-template: repeat(3, 1fr) / repeat(2, 1fr); */
+            grid-template:  100px 1fr 150px / 200px 1fr;
+            /* grid-column-gap: 30px;
+            grid-row-gap: 30px; */
+            /* grid-gap: filas columnas; */
+            grid-gap: 10px;
+            height: 100vh;
+            grid-template-areas: "header header" 
+                                 "left contenido"
+                                 "footer footer"
+        }
+
+        .item {
+            background: lightblue;
+            padding: 10px;
+            border: .1px solid blue;
+            /* margin-right: 10px; */
+            /* margin-bottom: 10px; */
+        }
+
+        .item:nth-of-type(4) {
+            background: blue;
+            overflow: auto;
+            display: sub-grid;
+            /* display: inline-grid; */
+            display:grid;
+            grid-template:  50px 50px 50px / 200px 200px 200px;
+        }
+
+        .item .item {
+            background: yellow;
+        }
+
+
+        .header {
+            grid-area: header;
+        }
+
+
+        .left {
+            grid-area: left;
+        }
+
+
+        .contenido{
+            grid-area: contenido;
+        }
+
+        .footer{
+             grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item header">header</div>
+        <div class="item left">left</div>
+        <div class="item contenido">contenido</div>
+        <div class="item footer">footer</div>
+    </section>
+</body>
+</html>
