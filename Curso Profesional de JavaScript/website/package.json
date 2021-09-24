@@ -1,0 +1,24 @@
+{
+  "name": "jsprofessional",
+  "version": "1.0.0",
+  "description": "prácticas avanzadas de javascript",
+  "scripts": {
+    "start": "parcel index.html player-video/index.html typescript/**/*.html singleton/**/*.html observer/index.html"
+  },
+  "keywords": [
+    "javascript",
+    "professional"
+  ],
+  "author": "Jasan A. Hérnandez Bautista <jasan814@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "1.12.3",
+    "typescript": "^3.6.3"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {
+    "@jasanhdz/mediaplayer": "^1.0.0"
+  }
+}
