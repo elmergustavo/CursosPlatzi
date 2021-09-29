@@ -141,7 +141,7 @@ Esta arquitectura tiene como ventaja la alta disponibilidad y la eficiencia para
 * AWS Elastic Beanstalk: es un servicio de ASW que se utiliza para implementar y escalar servicios y aplicaciones web desarrolladas en JAVA, .NET, PHP, Node.js, Python, Go, entre otros, en servidores familiares como Apache y Nginx. Además se encargará de administar de manera automática la implementación, el aprovisionamiento de la capacidad, el equilibrio de la carga y el escalado de nuestra aplicación.
 * CloudWatch: es un servicio de monitorieo y administración creado para desarrolladores, operadores de sistemas, entre otros. El servicio ofrece datos e información procesable para monitorear las aplicaciones, comprender cambios de rendimiento que afectan al sistema, optimizar recursos y lograr una vida unificada del estado de las operaciones.
 
-![Elastic Beanstalk](/images/elastic-beanstalk.png)
+![Elastic Beanstalk](https://github.com/elmergustavo/CursosPlatzi/blob/master/Curso%20de%20Fundamentos%20de%20AWS%20Cloud/images/elastic-beanstalk.png)
 
 [Youtube: Introduction to AWS Elastic Beanstalk](https://www.youtube.com/watch?v=SrwxAScdyT0)
 
