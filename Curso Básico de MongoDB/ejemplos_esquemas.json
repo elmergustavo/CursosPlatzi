@@ -1,0 +1,220 @@
+/*
+//Ejemplo 1. Documentos embedidos
+    - PRO: Aceso directo a TODA la información en una consulta.
+    - CON: Elevado tamaño del documento.
+            Consulta poco eficiente si solo queremos ver la lista de articulos y su stock dentro de un almacén (porque descarga todo el documento). 
+            El campo stock de cada articulo varía frecuentemente por lo que la complegidad de los updates ralentiza la BD.
+  
+*/
+
+//colección: almacenes
+{
+    "_id": "ALM0201",
+    "ubicación": "Calle Ejemplo 23",
+    "responsable": "Cristina Aguado",
+    "telefono": "999888777",
+    "contenedores":[
+        {
+        "_id": "CNT05123",
+                "tamaño":"40ft",
+                "color": "verde",
+                "articulos": [
+                    {
+                    "_id": "ART661234",
+                    "nombre": "Laptop",
+                    "marca":"superPC",
+                    "proveedor":"UAMZ Inc",
+                    "peligroso": false,
+                    "stock": 240
+                    },                
+                    {
+                    "_id": "ART903452",
+                    "nombre": "BateríaLaptop",
+                    "marca":"superPC",
+                    "proveedor":"UAMZ Inc",
+                    "peligroso": true,
+                    "stock": 350
+                    }
+
+                ]
+                    
+        },
+        {
+            "_id": "CNT02012",
+                    "tamaño":"20ft",
+                    "color": "rojo",
+                    "articulos": [                                      
+                        {
+                        "_id": "ART523642",
+                        "nombre": "Cable HDMI",
+                        "marca":"superCable",
+                        "proveedor":"ExIo SL",
+                        "peligroso": false,
+                        "stock": 1032
+                        }    
+                    ]
+        }
+    ]   
+},
+{
+    "_id": "ALM0111",
+    "ubicación": "Calle Recuerdo 12",
+    "responsable": "Pepe Villuela",
+    "telefono": "666111666",
+    "contenedores":[]
+}
+  
+/*
+//Ejemplo 2. Colecciones independientes con referencias (tipo SQL)
+    - PRO: Orden de los documentos 
+           Bajo peso de los documentos
+           Actualización rapida de todos los campos
+
+    - CONT: Consultas complejas debido a que se requeriran uniones.
+        
+*/
+
+//colección: almacenes
+{
+    "_id": "ALM0201",
+    "ubicación": "Calle Ejemplo 23",
+    "responsable": "Cristina Aguado",
+    "telefono": "999888777",
+    "contenedores":["CNT05123","CNT02012"]
+},
+{
+    "_id": "ALM0111",
+    "ubicación": "Calle Recuerdo 12",
+    "responsable": "Pepe Villuela",
+    "telefono": "666111666",
+    "contenedores":[]
+}
+
+// colección: contenedores
+{
+    "_id": "CNT05123",
+    "tamaño":"40ft",
+    "color": "verde",
+    "articulos": ["ART661234","ART903452"]
+},
+{
+    "_id": "CNT02012",
+    "tamaño":"20ft",
+    "color": "rojo",
+    "articulos": ["ART523642"]
+},
+
+//colección: artículos
+{
+    "_id": "ART661234",
+    "nombre": "Laptop",
+    "marca":"superPC",
+    "proveedor":"UAMZ Inc",
+    "peligroso": false,
+    "stock": 240
+},                
+{
+    "_id": "ART903452",
+    "nombre": "BateríaLaptop",
+    "marca":"superPC",
+    "proveedor":"UAMZ Inc",
+    "peligroso": true,
+    "stock": 350
+},
+{
+    "_id": "ART523642",
+    "nombre": "Cable HDMI",
+    "marca":"superCable",
+    "proveedor":"ExIo SL",
+    "peligroso": false,
+    "stock": 1032
+}
+
+
+
+/*
+//Ejemplo 3. Documentos embedidos con referencias a colecciones (si fuera necesario)
+    - PRO: Moderado peso de los documentos
+           Consulta y actualización rapida de los datos "frecuentes". Como el stock y el nombre.
+           Orden de los documentos de los "articulos" de modo que se puede acceder a sus de talles directamente.
+           
+
+    - CON: Ciertos valores como el "nombre" de los articulos se deben actualizar por duplicado en ambas colecciones.
+    
+    Este seria el caso mas eficiente si queremos acceder rapidamente al stock de cada articulo dentro de un contenedor o almacen.
+    - La consulta/actualización de stock es una tarea muy frecuente, por lo que conviene optimizarse.
+    - La consulta de detalles de un articulo es una tarea menos frecuente, por lo que se pueden dejar en una coleccion a parte con referencia.
+
+    
+*/
+
+//colección: almacenes
+{
+    "_id": "ALM0201",
+    "ubicación": "Calle Ejemplo 23",
+    "responsable": "Cristina Aguado",
+    "telefono": "999888777",
+    "contenedores":[
+        {
+        "_id": "CNT05123",
+                "tamaño":"40ft",
+                "color": "verde",
+                "articulos": [
+                    {
+                    "_id": "ART661234",
+                    "nombre": "Laptop",
+                    "stock": 240
+                    },                
+                    {
+                    "_id": "ART903452",
+                    "nombre": "BateríaLaptop",
+                    "stock": 350
+                    }
+
+                ]
+                    
+        },
+        {
+            "_id": "CNT02012",
+                    "tamaño":"20ft",
+                    "color": "rojo",
+                    "articulos": [                                      
+                        {
+                        "_id": "ART523642",
+                        "nombre": "Cable HDMI",
+                        "stock": 1032
+                        }    
+                    ]
+        }
+    ]   
+},
+{
+    "_id": "ALM0111",
+    "ubicación": "Calle Recuerdo 12",
+    "responsable": "Pepe Villuela",
+    "telefono": "666111666",
+    "contenedores":[]
+}
+
+//colección: artículos
+{
+    "_id": "ART661234",
+    "nombre": "Laptop",
+    "marca":"superPC",
+    "proveedor":"UAMZ Inc",
+    "peligroso": false,
+},                
+{
+    "_id": "ART903452",
+    "nombre": "BateríaLaptop",
+    "marca":"superPC",
+    "proveedor":"UAMZ Inc",
+    "peligroso": true,
+},
+{
+    "_id": "ART523642",
+    "nombre": "Cable HDMI",
+    "marca":"superCable",
+    "proveedor":"ExIo SL",
+    "peligroso": false,
+}
