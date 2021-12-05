@@ -1,0 +1,27 @@
+.menu-desktop {
+  width: 150px;
+  padding: 0 8px;
+  height: auto;
+  border: 1px solid $color-very-light-pink;
+  border-radius: 8px;
+
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    text-align: end;
+  }
+  &__link {
+    display: block;
+    font-size: $md;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-dark;
+    padding: 16px 8px;
+    
+    &--primary{
+      color: $color-hospital-green;
+      border-top: 1px solid $color-very-light-pink;
+    }
+  }
+}

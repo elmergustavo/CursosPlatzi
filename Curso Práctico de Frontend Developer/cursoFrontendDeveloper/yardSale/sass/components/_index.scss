@@ -1,0 +1,47 @@
+.cards-container {
+  min-width: 320px;  
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  
+  @media (min-width: 426px) {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(auto-fill, 240px);
+  }
+}
+
+.product-card {
+  width: 100%;
+  
+  &__img {
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  &__detail {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    margin-top: 4px;
+  }
+
+  &__price {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: $md;
+  }
+  &__product-name {
+    font-weight: 300;
+    font-size: $md;
+  }
+}

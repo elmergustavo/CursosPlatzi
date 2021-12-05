@@ -1,0 +1,90 @@
+.main-header {
+  min-width: 320px;
+  width: 100%;
+  height: 54px;
+  padding: 8px 16px;
+  border-bottom: 1px solid $color-very-light-pink;
+  @media (min-width: 640px){
+    padding: 8px 40px;
+  }
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+
+  &__burger-menu {
+    @media (min-width: 640px) and (min-width: 904px) {
+      display: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+  }
+  &__logo {
+    width: 145px;
+  }
+  &__menu-list {
+    display: none;
+
+    @media (min-width: 640px) and (min-width: 904px) {
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+  }
+  // &__menu-item {} 
+  &__menu-link {
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: $md;
+    color: $color-very-light-pink;
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    &:hover{
+      color: $color-hospital-green;
+      border: 1px solid $color-hospital-green;
+    }
+
+    &--primary {
+      color: $color-hospital-green;
+      border: 1px solid $color-hospital-green;
+    }
+  } 
+
+  // &__right {}
+  &__account-list {        
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+  }
+  &__email {
+    display: none;
+    font-size: $sm;
+    font-weight: 300;
+    
+    @media (min-width: 640px) {
+      display: block;
+    }
+  }
+  &__cart {
+    display: flex;
+    align-items: center;
+    
+    @media (min-width: 640px) {
+      display: block;
+    }
+    
+    & img {
+      width: 100%;
+    }
+  }
+}

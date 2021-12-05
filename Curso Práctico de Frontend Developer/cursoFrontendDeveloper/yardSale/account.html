@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="main-header"> 
+      <nav class="navbar"><img class="navbar__burger-menu" src="assets/icons/icon_menu.svg" alt="Menu icon">
+        <div class="navbar__left"> <img class="navbar__logo" src="assets/logos/logo_yard_sale.svg" alt="Yard sale icon">
+          <ul class="navbar__menu-list">
+            <li class="navbar__menu-item"><a class="navbar__menu-link navbar__menu-link--primary" href="#">All</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Clothes</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Electronics</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Furniture</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Toys</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Others</a></li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="navbar__account-list"> 
+            <li class="navbar__email">camilayokoo@email.com</li>
+            <li class="navbar__cart"><img src="assets/icons/icon_shopping_cart.svg" alt="Shopping cart icon"></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="main-container">
+      <section class="account">
+        <h1 class="content-title content-title--account">My account</h1>
+        <form class="account__form">
+          <label class="labels" for="name">Name</label>
+          <input class="inputs" type="text" id="name" placeholder="Camila Yokoo">
+          <label class="labels" for="email">Email address </label>
+          <input class="inputs" type="email" id="email" placeholder="camilayokoo@email.com">
+          <label class="labels" for="password">Password </label>
+          <input class="inputs" type="password" id="password" placeholder="******">
+        </form>
+        <button class="button button--primary button--account">Create</button>
+      </section>
+    </div>
+  </body>
+</html>

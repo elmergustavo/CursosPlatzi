@@ -1,0 +1,11 @@
+extends components/templates.pug
+
+block content 
+  .main-container.main-container--block 
+    main.orders
+      h2.orders__title My orders
+      
+      +orders-item("04.25.21", "99", "222.22")
+      +orders-item("04.25.21", "99", "222.22")
+      +orders-item("04.25.21", "99", "222.22")
+      +orders-item("04.25.21", "99", "222.22")

@@ -1,0 +1,16 @@
+extends components/templates.pug
+
+block content 
+  aside.product-detail 
+    figure.product-detail__images
+      .product-detail__close-icon
+        img(src="assets/icons/icon_close.png", alt="Close icon")
+      img.product-detail__product-img(src="assets/images/camera.jpg", alt="Product image camera")
+    .product-detail__info
+      p.product-detail__price $120,00
+      p.product-detail__product Camera
+      p.product-detail__description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti eum neque ducimus odit quis non eos repellat incidunt minus eveniet.
+      button.button.button--primary.button--add-to-cart
+        img(src="assets/icons/bt_add_to_cart.svg", alt="Icon add to cart")
+        span Add to cart
+

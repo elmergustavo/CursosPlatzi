@@ -1,0 +1,18 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Card
+    link(rel="stylesheet", href="css/styles.css")
+  body 
+    section.container 
+      .card 
+        header.card__header 
+          h2.card__temp 19°
+          p.card__hour 23:18
+        .card__days 
+          p.card__day jue #[span 21°]
+          p.card__day.card__day--highlight vie #[span 19°]
+          p.card__day sab #[span 22°]

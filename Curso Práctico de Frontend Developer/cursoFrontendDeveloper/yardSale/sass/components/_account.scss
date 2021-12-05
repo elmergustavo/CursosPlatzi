@@ -1,0 +1,39 @@
+.account {
+  width: 100%;  
+  max-width: 400px;
+  height: 100%; 
+  padding: 16px;
+  display: grid;
+  justify-items: center;
+
+  @media (min-width: 640px) {
+    height: auto;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // My account
+  &__value {
+    height: 32px;    
+    margin-bottom: 20px;
+    font-size: $md;
+    font-weight: 300;
+  }
+}
+
+.content-title--account {  
+  margin-bottom: 40px;
+  justify-self: start;
+  align-self: flex-end;
+}
+
+.button--account {
+  align-self: flex-end;
+  @media (min-width: 640px) {
+    align-self: flex-start;
+  }
+}

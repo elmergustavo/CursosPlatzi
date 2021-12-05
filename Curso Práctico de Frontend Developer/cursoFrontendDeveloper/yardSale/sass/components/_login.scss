@@ -1,0 +1,28 @@
+.login { 
+  width: 100%;  
+  max-width: 400px;
+  height: 100%;
+  padding: 16px;
+  display: grid;
+  justify-items: center;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+}
+
+.link--login {
+  text-align: center;
+  margin-bottom: 52px;  
+}
+
+.button--sign-up {  
+  align-self: flex-end;
+  @media (min-width: 640px) {
+    align-self: flex-start;
+  }
+}
+

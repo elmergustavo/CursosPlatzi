@@ -1,0 +1,43 @@
+.orders {
+  min-width: 320px;
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+
+  &__title {
+    font-size: $md;
+    font-weight: 700;
+  }  
+  // &__content {}
+  &__item {
+    width: 100%;
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+  }
+  &__date {
+    font-size: $md;
+    font-weight: 700; 
+  }
+  &__total {
+    font-size: $sm;
+    font-weight: 300;
+  }
+  &__price {
+    font-family: $font-secondary;
+    font-size: $md;
+    font-weight: 700;
+    text-align: end;
+  }
+  &__icon{
+    cursor: pointer;
+  }
+}

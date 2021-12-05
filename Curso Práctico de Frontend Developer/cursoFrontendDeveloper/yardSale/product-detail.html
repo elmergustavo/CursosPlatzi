@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="main-header"> 
+      <nav class="navbar"><img class="navbar__burger-menu" src="assets/icons/icon_menu.svg" alt="Menu icon">
+        <div class="navbar__left"> <img class="navbar__logo" src="assets/logos/logo_yard_sale.svg" alt="Yard sale icon">
+          <ul class="navbar__menu-list">
+            <li class="navbar__menu-item"><a class="navbar__menu-link navbar__menu-link--primary" href="#">All</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Clothes</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Electronics</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Furniture</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Toys</a></li>
+            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Others</a></li>
+          </ul>
+        </div>
+        <div class="navbar__right">
+          <ul class="navbar__account-list"> 
+            <li class="navbar__email">camilayokoo@email.com</li>
+            <li class="navbar__cart"><img src="assets/icons/icon_shopping_cart.svg" alt="Shopping cart icon"></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="product-detail"> 
+      <figure class="product-detail__images">
+        <div class="product-detail__close-icon"><img src="assets/icons/icon_close.png" alt="Close icon"></div><img class="product-detail__product-img" src="assets/images/camera.jpg" alt="Product image camera">
+      </figure>
+      <div class="product-detail__info">
+        <p class="product-detail__price">$120,00</p>
+        <p class="product-detail__product">Camera</p>
+        <p class="product-detail__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti eum neque ducimus odit quis non eos repellat incidunt minus eveniet.</p>
+        <button class="button button--primary button--add-to-cart"><img src="assets/icons/bt_add_to_cart.svg" alt="Icon add to cart"><span>Add to cart</span></button>
+      </div>
+    </aside>
+  </body>
+</html>

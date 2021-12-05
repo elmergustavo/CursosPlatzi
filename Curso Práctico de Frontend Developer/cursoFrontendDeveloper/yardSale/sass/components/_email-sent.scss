@@ -1,0 +1,30 @@
+.email-sent {
+  width: 100%;  
+  max-width: 400px;
+  height: 100%;
+  padding: 16px;
+  display: grid;
+  justify-items: center;
+  @media (min-width: 640px) {
+    height: auto;
+  }
+
+  &__icon {
+    width: 132px;
+    height: 132px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $color-text-input-field;
+
+    & img {
+      width: 60%;
+    }
+  }
+
+  &__paragraph {
+    margin-top: 12px;
+    font-size: $sm; 
+  }
+}

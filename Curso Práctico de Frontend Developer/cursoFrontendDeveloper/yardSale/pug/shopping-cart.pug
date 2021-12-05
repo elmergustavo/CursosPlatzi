@@ -1,0 +1,22 @@
+extends components/templates.pug
+
+block content 
+  .main-container.main-container--block 
+    main.shopping-cart
+      .shopping-cart__header
+        img(src="assets/icons/flechita.svg", alt="Back arrow icon")
+        h2.shopping-cart__title Shoping cart
+      
+      section.shop-cart
+        +shop-cart-item("camera.jpg", "Camera", "$ 122.22", "close")
+        +shop-cart-item("pineapple.jpg", "Pineaple", "$ 122.22", "close")
+        +shop-cart-item("lighter.jpg", "Ligther", "$ 122.22", "close")
+        +shop-cart-item("pineapple.jpg", "Pineaple", "$ 122.22", "close")
+        +shop-cart-item("camera.jpg", "Camera", "$ 122.22", "close")
+        +shop-cart-item("lighter.jpg", "Ligther", "$ 122.22", "close")
+      
+      .shopping-cart__info
+        p.shopping-cart__detail Total
+        p.shopping-cart__price $ 506.00
+      
+      button.button.button--primary Checkout

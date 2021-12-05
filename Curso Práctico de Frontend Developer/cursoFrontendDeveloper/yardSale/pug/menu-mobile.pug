@@ -1,0 +1,23 @@
+extends components/templates.pug
+
+block content 
+  nav.menu
+    //- Categories 
+    ul.menu__list 
+      li.menu__item: h3.menu__title Categories
+      li.menu__item: a.menu__link(href="#") All
+      li.menu__item: a.menu__link(href="#") Clothes
+      li.menu__item: a.menu__link(href="#") Electronics
+      li.menu__item: a.menu__link(href="#") Furnitures
+      li.menu__item: a.menu__link(href="#") Toys
+      li.menu__item: a.menu__link(href="#") Others
+
+    //- My profile
+    ul.menu__list.menu__list--profile
+      li.menu__item: a.menu__link(href="#") My orders
+      li.menu__item: a.menu__link(href="#") My account
+    
+    //- Sign out
+    ul.menu__list.menu__list--signout
+      li.menu__item.menu__item--signout: p.menu__email camilayokoo@email.com
+      li.menu__item.menu__item--signout: a.menu__link.menu__link--primary(href="#") Sign out

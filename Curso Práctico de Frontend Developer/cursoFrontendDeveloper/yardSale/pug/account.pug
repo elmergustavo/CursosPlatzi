@@ -1,0 +1,18 @@
+extends ./components/templates.pug
+
+block content
+  .main-container
+    section.account
+      h1.content-title.content-title--account My account
+
+      form.account__form
+        label.labels(for="name") Name
+        input.inputs(type="text" id="name" placeholder="Camila Yokoo")
+
+        label.labels(for="email") Email address 
+        input.inputs(type="email" id="email" placeholder="camilayokoo@email.com")
+
+        label.labels(for="password") Password 
+        input.inputs(type="password" id="password" placeholder="******")
+
+      button.button.button--primary.button--account Create

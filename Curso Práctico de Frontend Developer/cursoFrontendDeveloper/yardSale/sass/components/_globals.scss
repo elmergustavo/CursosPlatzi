@@ -1,0 +1,156 @@
+// COLORS
+$color-light: #ffffff;
+$color-dark: #000000;
+$color-very-light-pink: #c7c7c7;
+$color-text-input-field: #f7f7f7;
+$color-hospital-green: #acd9b2;
+
+// FONTS
+$font-primary: "Quicksand", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+// SIZES
+$sm: 1.4rem;
+$md: 1.6rem;
+$lg: 1.8rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $md;
+  font-family: $font-primary;
+}
+
+.main-container {
+  width: 100%;
+  min-width: 320px;
+  height: calc(100vh - 54px);
+  display: grid;
+  place-items: center;
+  
+  &--block {
+    display: block;
+    height: auto;
+  }
+}
+
+.content-logo {
+  width: 150px;
+  margin-bottom: 48px;
+  justify-self: center;
+  align-self: flex-end;
+
+  & img {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    display: none;
+  }
+}
+
+.content-title {
+  margin-bottom: 12px;
+  font-size: $lg;
+  text-align: center;
+}
+
+.content-sub-title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: $md;
+  font-weight: 300;
+  text-align: center;
+  color: $color-dark;
+}
+
+.labels {
+  font-size: $sm;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.inputs {
+  height: 32px;
+  padding: 6px;
+  margin-bottom: 20px;
+  font-size: $md;
+  background-color: $color-text-input-field;
+  border: none;
+  border-radius: 8px;
+}
+
+.button {
+  width: 100%;
+  height: 50px;  
+  border: none;
+  border-radius: 8px;
+  font-family: $font-primary;
+  font-size: $md;
+  font-weight: 700;
+  color: $color-light;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $color-hospital-green;
+  }
+
+  &--secondary {
+    border: 1px solid $color-hospital-green;
+    background-color: $color-light;
+    color: $color-hospital-green;
+  }
+
+  &--add-to-cart {
+    margin: 28px 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.link {
+  font-size: $sm;
+  color: $color-hospital-green;
+  text-decoration: none;
+}
+
+.shop-cart {
+  width: 100%;
+  height: auto;
+  
+  &__item {
+    width: 100%;
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+  }
+  &__img {
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__product {
+    font-size: $sm;
+    font-weight: 400;
+  }
+
+  &__price {
+    // font-family: roboto;
+    font-size: $md;
+    font-weight: 700;
+  }
+}

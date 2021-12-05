@@ -1,0 +1,20 @@
+extends ./components/templates.pug
+
+block content
+  .main-container
+    section.new-pass
+      //- Logo
+      figure.content-logo
+        img(src="assets/logos/logo_yard_sale.svg" alt="Logo de yard sale")
+      //- Titles
+      h1.content-title Create a new password
+      p.content-sub-title Enter a new password for you acount 
+      //- Forms
+      form.new-pass__form
+        label.labels(for="password") Password 
+        input.inputs(type="password" id="password" placeholder="******")
+
+        label.labels(for="new-password") Re-enter password 
+        input.inputs(type="password" id="new-password" placeholder="******")
+
+        input.button.button--primary(type="submit" value="Confirm") 

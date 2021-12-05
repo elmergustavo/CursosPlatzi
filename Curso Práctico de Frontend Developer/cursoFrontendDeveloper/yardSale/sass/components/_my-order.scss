@@ -1,0 +1,40 @@
+.my-order {
+  min-width: 320px;
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  
+  &__title {
+    margin-bottom: 40px;
+    font-size: $md;
+    font-weight: 700;
+  }
+
+  &__info {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr ;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background-color: $color-text-input-field;
+  }
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    font-size: $md;
+    font-weight: 700;
+
+    & span {
+      font-size: $sm;
+      font-weight: 300;
+    }
+  }
+  &__price {
+    font-family: $font-secondary;
+    font-size: $md;
+    font-weight: 700;
+    text-align: end;
+  }
+}

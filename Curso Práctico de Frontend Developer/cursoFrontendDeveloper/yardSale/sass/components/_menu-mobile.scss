@@ -1,0 +1,53 @@
+.menu{  
+  min-height: auto;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    list-style: none;
+    margin-bottom: 12px;
+
+    &--profile {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid $color-very-light-pink;
+    }
+
+    &--signout {
+      margin-top: auto;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 16px 8px;
+
+    &--signout {
+      padding: 4px 8px;
+    }
+  }
+
+  &__title {
+    font-size: $md;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    font-size: $md;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-dark;
+  
+    &--primary {
+      font-size: $sm;
+      color: $color-hospital-green;
+    }
+  }
+
+  &__email {
+    font-size: $sm;
+  }
+}

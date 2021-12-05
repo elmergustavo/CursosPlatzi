@@ -1,0 +1,48 @@
+.shopping-cart {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  max-width: 425px;
+  padding: 16px;
+  background-color: $color-light;
+  
+  @media (min-width: 426px) {
+    position: absolute;
+    right: 0;
+    width: 384px;
+  }
+
+  &__header{
+    display: flex;
+    gap: 16px;
+
+    & img{
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-size: $md;
+    font-weight: 700;
+  }
+
+  &__info {
+    height: 76px;
+    display: flex;
+    margin: 40px 0 16px;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: $color-text-input-field;
+  }
+  &__detail {
+    font-size: $sm;
+    font-weight: 700;
+  }
+  &__price {
+    font-family: $font-secondary;
+    font-size: $md;
+    font-weight: 700;
+  }
+}

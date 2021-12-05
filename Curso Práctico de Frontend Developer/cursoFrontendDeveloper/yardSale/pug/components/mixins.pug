@@ -1,0 +1,25 @@
+mixin product-card(productImage, price, productName)
+  article.product-card
+    img.product-card__img(src="assets/images/"+productImage alt="Product image "+productName)
+    .product-card__detail
+      .product-card__info
+        p.product-card__price=price
+        p.product-card__product-name=productName
+      figure.product-card__icon 
+        img(src="assets/icons/bt_add_to_cart.svg" alt="Add to cart")
+
+mixin shop-cart-item(productImage, productName, price, close)
+  .shop-cart__item
+    img.shop-cart__img(src="assets/images/"+productImage, alt="Product image "+productName)
+    p.shop-cart__product= productName 
+    p.shop-cart__price= price
+    if close == "close" 
+      img(src="assets/icons/icon_close.png", alt="close icon")
+
+mixin orders-item(date, totalArticles, price)
+  .orders__item
+    .orders__detail
+      p.orders__date= date 
+      p.orders__total= totalArticles + " articles"
+    p.orders__price= "$ " + price
+    img.orders__icon(src="assets/icons/flechita.svg", alt="right arrow icon")

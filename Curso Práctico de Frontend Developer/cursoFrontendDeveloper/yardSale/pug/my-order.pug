@@ -1,0 +1,18 @@
+extends components/templates.pug
+
+block content 
+  .main-container.main-container--block 
+    main.my-order
+      h2.my-order__title My orders
+      
+      .my-order__info
+        p.my-order__detail 04.25.21 #[span 6 articles]
+        p.my-order__price $ 506.00
+      
+      section.shop-cart
+        +shop-cart-item("camera.jpg", "Camera", "$ 122.22")
+        +shop-cart-item("lighter.jpg", "lighter", "$ 122.22")
+        +shop-cart-item("pineapple.jpg", "Pineapple", "$ 122.22")
+        +shop-cart-item("camera.jpg", "Camera", "$ 122.22")
+        +shop-cart-item("lighter.jpg", "lighter", "$ 122.22")
+        +shop-cart-item("pineapple.jpg", "Pineapple", "$ 122.22")

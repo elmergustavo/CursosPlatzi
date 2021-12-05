@@ -1,0 +1,21 @@
+extends ./components/templates.pug
+
+block content
+  .main-container
+    section.login
+      //- Logo
+      figure.content-logo
+        img(src="assets/logos/logo_yard_sale.svg" alt="Logo de yard sale")
+
+      form.login__form
+        label.labels(for="email") Email address 
+        input.inputs(type="email" id="email" placeholder="my-email@example.com")
+
+        label.labels(for="password") Password 
+        input.inputs(type="password" id="password" placeholder="******")
+
+        input.button.button--primary(type="submit" value="Log in")
+      
+        a.link.link--login(href="#") Forgot my password
+
+      button.button.button--secondary.button--sign-up Sign up

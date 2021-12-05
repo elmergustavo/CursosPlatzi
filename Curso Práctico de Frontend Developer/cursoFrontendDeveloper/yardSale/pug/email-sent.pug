@@ -1,0 +1,18 @@
+extends ./components/templates.pug
+
+block content
+  .main-container
+    section.email-sent
+      //- Logo
+      figure.content-logo
+        img(src="assets/logos/logo_yard_sale.svg" alt="Logo de yard sale")
+      //- Titles
+      h1.content-title Email has been sent!
+      p.content-sub-title Please check your inbox for instructions on how to reset the password
+
+      figure.email-sent__icon
+        img(src="assets/icons/email.svg" alt="coso")
+
+      button.button.button--primary Login
+
+      p.email-sent__paragraph Didn't recive the email? #[a.link(href="#") Resend]
