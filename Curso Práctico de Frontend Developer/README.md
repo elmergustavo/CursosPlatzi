@@ -1148,7 +1148,7 @@ Pero con nuestra profesora Estefanny Aguilar lo haremos sin esta separación par
 </body>
 </html>
 ```
-## Menú desktop
+## 12. Menú desktop
 ![](https://static.platzi.com/media/user_upload/p1-9850e0be-2f07-4b66-9114-7525c64a3c50.jpg)
 ```html
 <!DOCTYPE html>
@@ -1229,4 +1229,343 @@ Pero con nuestra profesora Estefanny Aguilar lo haremos sin esta separación par
   </div>
 </body>
 </html>
+```
+## 13. Menú mobile
+![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202021-10-01%20a%20la%28s%29%2010.07.05-ddce5cc6-0cfd-4574-b769-041ece34751c.jpg)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .mobile-menu {
+      padding: 24px;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+      /* margin-bottom: 24px; */
+    }
+    .mobile-menu ul {
+      padding: 0;
+      margin: 24px 0 0;
+      list-style: none;
+    }
+    .mobile-menu ul:nth-child(1) {
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+    .mobile-menu ul li {
+      margin-bottom: 24px;
+    }
+    .email {
+      font-size: var(--sm);
+      font-weight: 300 !important;
+    }
+    .sign-out {
+      font-size: var(--sm);
+      color: var(--hospital-green) !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-menu">
+    <ul>
+      <li>
+        <a href="/">CATEGORIES</a>
+      </li>
+      <li>
+        <a href="/">All</a>
+      </li>
+      <li>
+        <a href="/">Clothes</a>
+      </li>
+      <li>
+        <a href="/">Electronics</a>
+      </li>
+      <li>
+        <a href="/">Furnitures</a>
+      </li>
+      <li>
+        <a href="/">Toys</a>
+      </li>
+      <li>
+        <a href="/">Other</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/">My orders</a>
+      </li>
+      <li>
+        <a href="/">My account</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="/" class="email">platzi@example.com</a>
+      </li>
+      <li>
+        <a href="/" class="sign-out">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
+
+```
+## 14. Mi orden: HTML
+![](https://static.platzi.com/media/user_upload/p1-fb3d0f20-c1b3-4c3a-ad5b-24fdb4056909.jpg)
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>My order | Platzi Yard Sale</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="my-order">
+            <div class="my-order-container">
+                <h1 class="title-order">
+                    My order
+                </h1>
+                <div class="my-order-content">
+                    <div class="order">
+                        <div>
+                            <p>
+                                <span>
+                                    10.03.2021
+                                </span>
+                                <span>
+                                    6 articles
+                                </span>
+                            </p>
+                        </div>
+                        <p>
+                            $560.00
+                        </p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+```
+
+## 15. Mi orden: CSS
+![](https://static.platzi.com/media/user_upload/order-c4dff5b0-5ff0-4ca4-a77f-2b1de6b67fe0.jpg)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .my-order {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 40px;
+    }
+    .my-order-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+    }
+    .my-order-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .order {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      background-color: var(--text-input-field);
+      margin-bottom: 24px;
+      border-radius: 8px;
+      padding: 0 24px;
+    }
+    .order p:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+    .order p span:nth-child(1) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+    .order p span:nth-child(2) {
+      font-size: var(--sm);
+      color: var(--very-light-pink);
+    }
+    .order p:nth-child(2) {
+      text-align: end;
+      font-weight: bold;
+    }
+    .shopping-cart {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+    .shopping-cart figure {
+      margin: 0;
+    }
+    .shopping-cart figure img {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .shopping-cart p:nth-child(2) {
+      color: var(--very-light-pink);
+    }
+    .shopping-cart p:nth-child(3) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="my-order">
+    <div class="my-order-container">
+      <h1 class="title">My order</h1>
+
+      <div class="my-order-content">
+        <div class="order">
+          <p>
+            <span>03.25.21</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+ 
 ```
