@@ -1734,3 +1734,420 @@ Pero con nuestra profesora Estefanny Aguilar lo haremos sin esta separación par
 </body>
 ```
 ## 18. Navbar: CSS
+![](https://static.platzi.com/media/user_upload/mobile-aad99985-d4a7-4db6-a95c-587135421a7a.jpg)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 100px;
+    }
+    .navbar-left ul,
+    .navbar-right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+    .navbar-left {
+      display: flex;
+    }
+    .navbar-left ul {
+      margin-left: 12px;
+    }
+    .navbar-left ul li a,
+    .navbar-right ul li a {
+      text-decoration: none;
+      color: var(--very-light-pink);
+      border: 1px solid var(--white);
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .navbar-left ul li a:hover,
+    .navbar-right ul li a:hover {
+      border: 1px solid var(--hospital-green);
+      color: var(--hospital-green);
+    }
+    .navbar-email {
+      color: var(--very-light-pink);
+      font-size: var(--sm);
+      margin-right: 12px;
+    }
+    .navbar-shopping-cart {
+      position: relative;
+    }
+    .navbar-shopping-cart div {
+      width: 16px;
+      height: 16px;
+      background-color: var(--hospital-green);
+      border-radius: 50%;
+      font-size: var(--sm);
+      font-weight: bold;
+      position: absolute;
+      top: -6px;
+      right: -3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .menu {
+        display: block;
+      }
+      .navbar-left ul {
+        display: none;
+      }
+      .navbar-email {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+
+    <div class="navbar-left">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+ 
+      <ul>
+        <li>
+          <a href="/">All</a>
+        </li>
+        <li>
+          <a href="/">Clothes</a>
+        </li>
+        <li>
+          <a href="/">Electronics</a>
+        </li>
+        <li>
+          <a href="/">Furnitures</a>
+        </li>
+        <li>
+          <a href="/">Toys</a>
+        </li>
+        <li>
+          <a href="/">Others</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">platzi@example.com</li>
+        <li class="navbar-shopping-cart">
+          <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
+          <div>2</div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>
+```
+## 19. Detalle de producto
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .product-detail {
+      width: 360px;
+      padding-bottom: 24px;
+      position: absolute;
+      right: 0;
+    }
+    .product-detail-close {
+      background: var(--white);
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 2;
+      padding: 12px;
+      border-radius: 50%;
+    }
+    .product-detail-close:hover {
+      cursor: pointer;
+    }
+    .product-detail > img:nth-child(2) {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 0 0 20px 20px;
+    }
+    .product-info {
+      margin: 24px 24px 0 24px;
+    }
+    .product-info p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .product-info p:nth-child(2) {
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+    .product-info p:nth-child(3) {
+      color: var(--very-light-pink);
+      font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 36px;
+    }
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+    }
+    .add-to-cart-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 640px) {
+      .product-detail {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="product-detail">
+    <div class="product-detail-close">
+      <img src="./icons/icon_close.png" alt="close">
+    </div>
+    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+    <div class="product-info">
+      <p>$35,00</p>
+      <p>Bike</p>
+      <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+      <button class="primary-button add-to-cart-button">
+        <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+        Add to cart
+      </button>
+    </div>
+  </aside>
+</body>
+</html>
+```
+## 20. Carrito de compras: HTML
+![](https://static.platzi.com/media/user_upload/cart-7f027106-ffe0-4717-a1b9-a47b52db1d61.jpg)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .product-detail {
+      width: 360px;
+      padding: 24px;
+      box-sizing: border-box;
+      position: absolute;
+      right: 0;
+    }
+    .title-container {
+      display: flex;
+    }
+    .title-container img {
+      transform: rotate(180deg);
+      margin-right: 14px;
+    }
+    .title {
+      font-size: var(--lg);
+      font-weight: bold;
+    }
+    .order {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      background-color: var(--text-input-field);
+      margin-bottom: 24px;
+      border-radius: 8px;
+      padding: 0 24px;
+    }
+    .order p:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+    .order p span:nth-child(1) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+    .order p:nth-child(2) {
+      text-align: end;
+      font-weight: bold;
+    }
+    .shopping-cart {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+    .shopping-cart figure {
+      margin: 0;
+    }
+    .shopping-cart figure img {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .shopping-cart p:nth-child(2) {
+      color: var(--very-light-pink);
+    }
+    .shopping-cart p:nth-child(3) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+    .primary-button {
+      background-color: var(--hospital-green);
+      border-radius: 8px;
+      border: none;
+      color: var(--white);
+      width: 100%;
+      cursor: pointer;
+      font-size: var(--md);
+      font-weight: bold;
+      height: 50px;
+    }
+    @media (max-width: 640px) {
+      .product-detail {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="product-detail">
+    <div class="title-container">
+      <img src="./icons/flechita.svg" alt="arrow">
+      <p class="title">My order</p>
+    </div>
+
+    <div class="my-order-content">
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+        </figure>
+        <p>Bike</p>
+        <p>$30,00</p>
+        <img src="./icons/icon_close.png" alt="close">
+      </div>
+
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+        </figure>
+        <p>Bike</p>
+        <p>$30,00</p>
+        <img src="./icons/icon_close.png" alt="close">
+      </div>
+
+      <div class="shopping-cart">
+        <figure>
+          <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+        </figure>
+        <p>Bike</p>
+        <p>$30,00</p>
+        <img src="./icons/icon_close.png" alt="close">
+      </div>
+
+      <div class="order">
+        <p>
+          <span>Total</span>
+        </p>
+        <p>$560.00</p>
+      </div>
+
+      <button class="primary-button">
+        Checkout
+      </button>
+    </div>
+  </div>
+  </aside>
+</body>
+</html>
+```
