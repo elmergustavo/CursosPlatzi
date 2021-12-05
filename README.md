@@ -5,6 +5,8 @@
   <br>
 </h1>
 
+![](https://static.platzi.com/media/learningpath/banners/e6513a52-a33e-481a-977b-73e20e2f4902.jpg)
+
 
 ## Tabla de Contenido
 
