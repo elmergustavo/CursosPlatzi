@@ -1,6 +1,20 @@
 # NOTAS DEL CURSO PRÁCTICO DE FRONTEND DEVELOPER
 
 <code><img height="80" src="https://static.platzi.com/media/achievements/badge-curso-practico-frontend-developer-d28c2eb0-cd3e-4951-bb96-5f1bcab2add5.png" alt="Sass"/></code>
+## Live pages
+
+ - [index](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/index.html)
+ - [account](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/account.html)
+ - [email-sent](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/email-sent.html)
+ - [login](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/login.html)
+ - [menu-desktop](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/menu-desktop.html)
+ - [menu-mobile](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/menu-mobile.html)
+ - [my-account](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/my-account.html)
+ - [my-order](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/my-order.html)
+ - [new-pass](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/new-pass.html)
+ - [orders-history](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/orders-history.html)
+ - [product-detail](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/product-detail.html)
+ - [shopping-cart](https://pikyr.github.io/cursoFrontendDeveloper/yardSale/shopping-cart.html)
 
 ## 01. ¿Ya tomaste el Curso de Frontend Developer?
 Lecturas recomendadas
