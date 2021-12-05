@@ -1569,3 +1569,166 @@ Pero con nuestra profesora Estefanny Aguilar lo haremos sin esta separación par
 </html>
  
 ```
+## 16. Mis órdenes
+![](https://static.platzi.com/media/user_upload/Selection_071-c34c18c9-1328-431e-b941-06d045419295.jpg)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .my-order {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 40px;
+    }
+    .my-order-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+    }
+    .my-order-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .order {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .order p:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+    .order p span:nth-child(1) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+    .order p span:nth-child(2) {
+      font-size: var(--sm);
+      color: var(--very-light-pink);
+    }
+    .order p:nth-child(2) {
+      text-align: end;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="my-order">
+    <div class="my-order-container">
+      <h1 class="title">My orders</h1>
+
+      <div class="my-order-content">
+        <div class="order">
+          <p>
+            <span>03.25.21</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
+          <img src="./icons/flechita.svg" alt="arrow">
+        </div>
+
+        <div class="order">
+          <p>
+            <span>03.25.21</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
+          <img src="./icons/flechita.svg" alt="arrow">
+        </div>
+
+        <div class="order">
+          <p>
+            <span>03.25.21</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
+          <img src="./icons/flechita.svg" alt="arrow">
+        </div>
+
+        <div class="order">
+          <p>
+            <span>03.25.21</span>
+            <span>6 articles</span>
+          </p>
+          <p>$560.00</p>
+          <img src="./icons/flechita.svg" alt="arrow">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+## 17. Navbar: HTML
+```html
+<body>
+  <nav>
+    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+
+    <div class="navbar-left">
+      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+      <ul>
+        <li>
+          <a href="/">All</a>
+        </li>
+        <li>
+          <a href="/">Clothes</a>
+        </li>
+        <li>
+          <a href="/">Electronics</a>
+        </li>
+        <li>
+          <a href="/">Furnitures</a>
+        </li>
+        <li>
+          <a href="/">Toys</a>
+        </li>
+        <li>
+          <a href="/">Others</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-right">
+      <ul>
+        <li class="navbar-email">platzi@example.com</li>
+        <li class="navbar-shopping-cart">
+          <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
+          <div>2</div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+```
+## 18. Navbar: CSS
