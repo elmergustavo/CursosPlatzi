@@ -1,5 +1,7 @@
 # NOTAS DEL CURSO PRÁCTICO DE FRONTEND DEVELOPER
 
+<code><img height="80" src="https://static.platzi.com/media/achievements/badge-curso-practico-frontend-developer-d28c2eb0-cd3e-4951-bb96-5f1bcab2add5.png" alt="Sass"/></code>
+
 ## 01. ¿Ya tomaste el Curso de Frontend Developer?
 Lecturas recomendadas
 
