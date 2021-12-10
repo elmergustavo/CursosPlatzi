@@ -69,9 +69,84 @@ Node.JS es un entorno de ejecución de JS que corre en el Back-end. Permite trab
 
 ![](https://static.platzi.com/media/user_upload/Untitled%20%281%29-9e7855fe-dc07-4942-a617-b23a1cd197e8.jpg)
 
+Dentro de JavaScript tenemos tres formas de declarar una variable las cuales son: var, const y let.
+
+Var: Era la forma en que se declaraban las variables hasta ECMAScript 5. Casi ya no se usa porque es de forma global y tiene las siguientes características:
+
+o Se puede reinicializar: osea todas las variables se inicializan, por ejemplo:
+Var pokemonType = ‘electric’ entonces reinicializar es:
+Var pokemonType = ‘grass’ osea la misma variable con diferentes datos el último dato predomina.
+o Se puede reasignar: osea la variable ya inicializada le reasignamos otro valor por ejemplo: inicializamos la variable: Var pokemonType = ‘electric’ ahora la reasignamos pokemonType = ‘grass’ ya no va var
+o Su alcance es función global: osea inicializamos la variable, pero la podemos llamar desde cualquier bloque (una llave abierta y una cerrada {}) pero hay que tener mucho cuidado con ello ya que puede haber peligro, no es recomendable usar VAR.
+
+const y let es la forma en que se declaran las variables a partir de ECMAScript 6,
+
+const: sirve para declarar variables que nunca van a ser modificadas:
+o No se puede reinicilizar: es una const única no puede haber otra inicializada con el mismo nombre. const pokemonType = ‘electric’ no puede haber:
+const pokemonType = ‘grass’
+o No se pude re asignar: una vez que la hayamos inicializado no la podemos reasignar solo con su nombre: const pokemonType = ‘electric’ no puede ejecutarse:
+pokemonType = ‘grass’
+o No es inmutable: osea no puede cambiar con objetos:
+
+Let: Son variables que pueden ser modificadas, se pueden cambiar:
+o No se puede reinicilizar: es una const única no puede haber otra inicializada con el mismo nombre. let pokemonType = ‘electric’ no puede haber:
+let pokemonType = ‘grass’
+o Se puede reasignar: Osea la variable ya inicializada le reasignamos otro valor por ejemplo: inicializamos la variable: let pokemonType = ‘electric’ ahora la reasignamos pokemonType = ‘grass’
+o Su contexto de es bloque: Solo funciona dentro de un bloque {}, fuera de ello no.
+
+![](https://static.platzi.com/media/user_upload/JavaScript-4e0b4a50-c2ef-40af-b403-a1e4e7a64436.jpg)
+![](https://static.platzi.com/media/user_upload/4%29Variables-4a4aaccd-6f03-417a-bf37-76fdfd8f5752.jpg)
+
+![](https://static.platzi.com/media/user_upload/JavaScript%20%281%29-997fdbe2-5817-4e30-a6b4-71f2bf6c53e2.jpg)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
+¿Qué es una función declarativa y una expresiva?
+
+Cuando hablamos de funciones en JavaScript, tenemos dos tipos de funciones: Funciones Declarativas (function declaration / function statement) y Expresiones de función (function expression / funciones anónimas).
+
+Funciones Declarativas:
+En las funciones declarativas, utilizamos la palabra reservada function al inicio para poder declarar la función:
+
+```js
+function saludar(nombre) {
+	console.log(`Hola ${nombre}`);
+}
+
+saludar('Diego');
+```
+
+Expresión de función:
+En la expresión de función, la declaración se inicia con la palabra reservada var, donde se generará una variable que guardará una función anónima.
+
+```js
+var nombre = function(nombre){
+    console.log(`Hola ${nombre}`)
+}
+
+nombre(‘Diego’);
+```
+
+En la expresión de función, la función podría o no llevar nombre, aunque es más común que se hagan anónimas.
+
+Diferencias:
+A las funciones declarativas se les aplica hoisting, y a la expresión de función, no. Ya que el hoisting solo se aplica en las palabras reservadas var y function.
+
+Lo que quiere decir que con las funciones declarativas, podemos mandar llamar la función antes de que ésta sea declarada, y con la expresión de función, no, tendríamos que declararla primero, y después mandarla llamar.
+
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+
+![](https://static.platzi.com/media/user_upload/104445629_117809673305290_4160707404159566859_o-a02739b8-c1a8-473d-85d2-352c59737fa2.jpg)
+![](https://static.platzi.com/media/user_upload/104163704_117809719971952_9118532895000404646_o-169e2b3c-6a01-40da-bd02-eda818e172a2.jpg)
+![](https://static.platzi.com/media/user_upload/105683156_117809693305288_8565633926620774673_o-63faf1ed-9e1d-4240-9030-a96af41dbd19.jpg)
+![](https://static.platzi.com/media/user_upload/103781043_117809739971950_5385296868813498879_o-e9174953-890b-4ed1-a834-779072bfd230.jpg)
+![](https://static.platzi.com/media/user_upload/103952006_117809733305284_7198650990608055435_o-4ffacc83-a616-41ab-824e-2dd4793a70ec.jpg)
+![](https://static.platzi.com/media/user_upload/104771822_117809763305281_3701417390702872195_o-4d913f45-2028-47a7-8263-850dcbd739ce.jpg)
+![](https://static.platzi.com/media/user_upload/104303933_117809836638607_410047023428968429_o-dcaeee63-a643-4bea-9d4c-432a0537990a.jpg)
+![](https://static.platzi.com/media/user_upload/104358902_117815513304706_639858807487491016_o-7627d953-974e-46ae-be7e-cb94b0006ec0.jpg)
+
+![](https://static.platzi.com/media/user_upload/3Captura-c10a7418-6e1a-4da2-9fd8-ee81d87a8e66.jpg)
 
 
-
-
-
+https://www.youtube.com/watch?v=uI6o97A4IrI
 
