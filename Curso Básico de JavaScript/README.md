@@ -65,6 +65,12 @@ Node.JS es un entorno de ejecución de JS que corre en el Back-end. Permite trab
 
 ![](https://static.platzi.com/media/user_upload/CU01112E_1-f9d2b6fc-f60c-4bf4-a61d-6bf9df36b268.jpg)
 
+![](https://static.platzi.com/media/user_upload/169c0df8121445d6c2848875d91521c7-f6097583-9431-489d-ba3d-263cfdb5e7e9.jpg)
+
+![](https://static.platzi.com/media/user_upload/Untitled%20%281%29-9e7855fe-dc07-4942-a617-b23a1cd197e8.jpg)
+
+
+
 
 
 
