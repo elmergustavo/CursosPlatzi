@@ -257,3 +257,79 @@ var resultado = function(user, cpu){
 
 resultado(op1,op3) //el usuario GANO con Piedra```
 ```
+## Arrays
+https://devcode.la/tutoriales/manejo-de-arrays-en-javascript/
+
+
+```js
+var colores = [“rojo”, “azul”, “verde”, “amarillo”];
+
+```
+
+Reverse, metodo que establece que el array invierte los elementos
+
+
+```js
+colores.reverse();
+["amarillo", "verde", "azul", "rojo", "anaranjado"]
+```
+Sort, metodo para ordenar alfabeticamente los array con datos de tipo String
+
+```js
+colores.sort();
+["amarillo", "anaranjado", "azul", "rojo", "verde"]
+```
+
+Slice, método que puede contener uno o dos argumentos, que indiquen el inicio y parada de posiciones, pues devuelve los elementos contenidos en el array, de acuerdo a los argumentos indicados, por ejemplo si a colores, le agregamos colores.slice(1,3); obtendremos los que se encuentran en la posición 1, 2
+
+```js
+colores =  ["amarillo", "anaranjado", "azul", "rojo", "verde"]
+colores.slice(1,3);
+["anaranjado", "azul"]
+```
+Si solo se indica un argumento se tomará como inicio ese argumento y como final la última posición, entonces si usamos:
+
+```js
+colores.slice(2);
+["azul", "rojo", "verde"]
+```
+
+var frutas = ["Manzana", "Plátano", "Cereza", "Fresas"];
+
+console.log(frutas);
+
+console.log(frutas.length); // lingitud o numero de elementos
+console.log(frutas[n]); // acceder al elemento por medio de index
+
+```js
+//Mutar o alterar Array
+var masFrutas = frutas.push("Uvas") //añadir elementos al final del array
+var ultimo = frutas.pop()//Eliminar el último elemento del Array
+var nuevaLongitud = frutas.unshift("Uvas");//añadir elemento al inicio del array
+var borrarFruta = frutas.shift("Uvas");//Borrar elemento
+var posicion = frutas.indexOf("Cereza");//Devuelve el index o posicion del elemento```
+```
+![](https://cdn.discordapp.com/attachments/328692261380685824/865328486779584523/1623252703192.png)
+
+![](https://static.platzi.com/media/user_upload/download%20%2827%29-c7353da6-958d-4ecd-85e3-cfa574151a05.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2828%29-3bffe0a0-0103-4e9f-b945-79753585fc92.jpg)
+
+![](https://static.platzi.com/media/user_upload/js-array-sort-f6e80ce2-f3e6-463f-94f2-06add172e76d.jpg)
+
+## Loops: For y For...of
+![](https://static.platzi.com/media/user_upload/download%20%2829%29-91079620-a820-4b66-8f6a-3678df995094.jpg)
+
+```js
+var frutas = ["Manzana", "Pera", "Naranja", "Platano", "Uva"];
+
+for (i = 0; i < frutas.length; i++) {
+    console.log(`Indice ${i}: ${frutas[i]}`);
+}
+
+for (e of frutas) {
+    console.log(`Elemento ${e}`);
+}```
+```
+* https://www.digitalocean.com/community/tutorials/for-loops-for-of-loops-and-for-in-loops-in-javascript
+![](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-06-24%20at%2022.48.54-8ec8f840-48ac-44ff-9efa-e775442e709f.jpg)
+
