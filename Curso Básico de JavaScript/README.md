@@ -333,3 +333,133 @@ for (e of frutas) {
 * https://www.digitalocean.com/community/tutorials/for-loops-for-of-loops-and-for-in-loops-in-javascript
 ![](https://static.platzi.com/media/user_upload/Screen%20Shot%202021-06-24%20at%2022.48.54-8ec8f840-48ac-44ff-9efa-e775442e709f.jpg)
 
+## Loops: While
+
+```js
+var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
+
+function saludarEstudiante(estudiante) {
+    console.log(`Hola ${estudiante}`);
+}
+
+var i = 0;
+
+//do-while
+do {
+    saludarEstudiante(estudiantes[i]);
+    i++;
+} while (i < estudiantes.length)
+
+//while
+while (estudiantes.length > 0) {
+    var estudiante = estudiantes.shift();
+    saludarEstudiante(estudiante);
+}
+```
+![](https://static.platzi.com/media/user_upload/download%20%2830%29-b72f1c8f-81f1-447a-a314-2c51616a1bb7.jpg)
+
+![](https://static.platzi.com/media/user_upload/carbonWhile-111dab6b-9f44-46f7-9e62-f2ee770d9f63.jpg)
+
+![](https://static.platzi.com/media/user_upload/Loops_apunte-e430fc7e-2a84-4b76-bd0c-4bd2c92fcd3a.jpg)
+
+## Objects
+![](https://static.platzi.com/media/user_upload/carbon%20%282%29-93ff2816-ead8-4cd2-acbb-5989138b518b.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2831%29-ec6e3c28-5cd8-4388-a150-3468855f329b.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2832%29-15c69b71-9ff2-4a7b-ba64-4a9d89f3e2a1.jpg)
+![](https://i.imgur.com/gEzNZIl.png)
+
+```js
+var piedrasPapelTijeras = {
+  // Marcador del juego
+  puntoMaquina: 0,
+  puntoUsuario: 0,
+
+  mostrarMarcador: function () {
+    console.log(`Maquina: ${this.puntoMaquina} - Usuario: ${this.puntoUsuario}`)
+  },
+
+  // Opciones Validas
+  opciones: ["piedra", "papel", "tijeras"],
+
+  // Mostrar opciones validas
+  mostrarOpciones: function () {
+    for (var opcion of this.opciones) {
+      console.log(`"${opcion}"`);
+    }
+  },
+
+  // --------AQUI COMIENZA EL JUEGO----------//
+  // entrada de la maquina
+  maquina: "",
+  // entrada del usuario
+  usuario: "",
+
+  validarMaquina: -1,
+  validarUsuario: -1,
+
+  // Funcion principal
+  jugar: function () {
+
+    while ((this.puntoMaquina < 10) && (this.puntoUsuario < 10)) {
+      console.log("¡A jugar!");
+      // Asinga un valor aleatorio a la entrada de maquina
+      this.maquina = this.opciones[Math.round(Math.random() * 3)];
+      // Asinga un valor aleatorio a la entrada de usuario
+      this.usuario = this.opciones[Math.round(Math.random() * 3)];
+      // Muestra las entradas
+      console.log(`Maquina: ${this.maquina}`);
+      console.log(`Usuario: ${this.usuario}`);
+      // busca las entradas en las opciones validas
+      this.validarMaquina = this.opciones.indexOf(this.maquina);
+      this.validarUsuario = this.opciones.indexOf(this.usuario);
+
+      // Revisa si las entradas son opciones validas
+      if ((this.validarMaquina >= 0) && (this.validarUsuario >= 0)) {
+        switch (true) {
+
+          // valida si hay empate
+          case (this.maquina === this.usuario):
+            console.log("Hay un empate");
+            this.mostrarMarcador();
+            this.jugar();
+            break;
+            //casos donde gana la maquina
+          case (((this.maquina === "piedra") && (this.usuario === "tijeras")) ||
+            ((this.maquina === "papel") && (this.usuario === "piedra")) ||
+            ((this.maquina === "tijeras") && (this.usuario === "papel"))):
+
+            console.log("La maquina ha ganado");
+            this.puntoMaquina++;
+            this.mostrarMarcador();
+            this.jugar();
+            break;
+
+          default: //si la maquina no gano, el usuario si
+
+            console.log("El usuario ha ganado");
+            this.puntoUsuario++;
+            this.mostrarMarcador();
+            this.jugar();
+        }
+      } else {
+        console.log(`Opcion no valida ingresa una de las siguientes opciones:`);
+        this.mostrarOpciones();
+        this.jugar();
+      }
+    }
+
+
+  },
+  // Resultados
+  resultados: function () {
+    this.puntoMaquina == 10 ? console.log("Lo siento la Maquina ha ganado :(") : console.log("¡Felicidades eres el campeón del juego!");
+  }
+}
+
+piedrasPapelTijeras.jugar();
+piedrasPapelTijeras.resultados();
+```
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/this
+
+## Objects: Función constructora
+
