@@ -486,3 +486,153 @@ for(let i = 0 ; i < autos.length ; i++){
 
 
 ## Métodos de recorridos de Arrays
+
+```js
+// Este ejemplo es imaginando que recibimos una lista de 30 carros diferentes y se nos solicita que se almacene esta información, como estamos aprendiendo a usar js por que es un lenguaje cool y no queremos tipiar todo de manera normal y aburrida, usaremos este lenguaje c: así hacemos un pequeño trabajo de separar todas las marcas, modelos y años respectivamente en distintos arrays para así lograr juntarlos en uno solo usando una función constructiva la cual indicara cada auto ingresado con su marca, modelo y año respectivamente.
+
+var marca = ["Audi", "Subaru", "Lexus", "Porsche", "BMW", "Mazda", "Buick", "Toyota", "Kia", "Honda", "Hyundai", "Volvo", "Mini", "Mercedes-Benz", "Volkswagen", "Ford", "Lincoln", "Scion", "Acura", "Chevrolet", "Nissan", "Infiniti", "GMC", "Cadillac", "Dodge", "Land", "Rover", "Mitsubishi", "Jeep", "Fiat"];
+var modelo = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30];
+var annio = [2020,2019,2018,2020,2020,2020,2018,2018,2020,2020,2020,2018,2018,2020,2020,2019,2020,2020,2019,2019,2020,2020,2019,2019,2019,2020,2019,2019,2018,2020];
+var listaAutos = [];
+function autoN(marca, modelo, annio){
+    this.marca = marca;
+    this.modelo = modelo;
+    this.annio = annio;
+} 
+for (var i = 0; i<30; i++){   
+    var autoNuevo = new autoN(marca[i],modelo[i],annio[i]);
+    listaAutos.push(autoNuevo);
+}
+
+// Luego se nos solicito que filtremos los carros por medio del año actual, ya que deseaban saber la cantidad de autos nuevos ingresados. Gracias a nuestro trabajo esto se podía saber de la siguiente manera:
+
+var autosFiltrados = listaAutos.filter(function(auto){
+    return auto.annio === 2020;
+});
+console.log(autosFiltrados);
+
+// Así logramos obtener una lista con todos los autos del año 2020 c:
+
+// Posterior a eso, se necesitaba obtener una lista urgentemente de las marcas de los 30 autos que acababan de ingresar por razones ajenas que no nos interesan c: Obviando que nosotros ya tenemos esta lista creada xD y queremos usar js para esto, esta tarea es tan sencilla como hacer: 
+
+var marcasRecientes = listaAutos.map(function(auto){
+    return auto.marca;
+});
+console.log(marcasRecientes);
+
+// Así obtenemos nuestra lista de marcas recientemente ingresadas c:
+```
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+```js
+var articulos = [
+	{ nombre: '📱', precio: 1000 },
+	{ nombre: '💻', precio: 1500 },
+	{ nombre: '🖥', precio: 2000 },
+	{ nombre: '⌨️', precio: 100 },
+	{ nombre: '🖱', precio: 70 },
+	{ nombre: '🚗', precio: 30000 },
+];
+
+// Método Filter
+var articulosFiltrados = articulos.filter(function(articulo) {
+	return articulo.precio <= 500;
+});
+
+// Método Map
+var nombreArticulos = articulos.map(function(articulo) {
+	return articulo.nombre;
+});
+
+articulosFiltrados;
+// (2) [{…}, {…}]
+//   0: {nombre: "⌨️", precio: 100}
+//   1: {nombre: "🖱", precio: 70}
+
+nombreArticulos; // (5) ["📱", "💻", "🖥", "⌨️", "🚗"]
+```
+![](https://static.platzi.com/media/user_upload/download%20%2834%29-71d4f38b-9123-4269-a1f4-34ed3de1fba6.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2835%29-1a924a64-19e9-4eea-9f23-fcdabd54f109.jpg)
+![](https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202021-07-13%20091857-ec55eef4-4a89-4b9b-a3f9-82edcdbd0375.jpg)
+
+```js
+//             *** Metodos de recorridos de arrays *** 
+//-------------------------------------------------------------
+
+var articulos = [
+    {nombre:"bicicleta", costo:"3000"},
+    {nombre:"tv", costo:"2500"},
+    {nombre:"libro", costo:"320"},
+    {nombre:"celular", costo:"10000"},
+    {nombre:"Laptop", costo:"20000"},
+    {nombre:"Teclado", costo:"500"},
+    {nombre:"Audifonos", costo:"1700"}
+]
+
+//metodo filter va a validar se algo es verdadero o falso
+
+var articulosFilatrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500
+});
+console.log(articulosFilatrados);
+
+// metodo map me va ayudar a mapear columnas de articulos
+
+var nombreArticulos = articulos.map(function(art){
+    return art.nombre
+});
+```
+![](https://static.platzi.com/media/user_upload/19-JS-0cdb9aae-196c-404f-b5bf-1a844a8677f6.jpg)
+
+## Recorriendo Arrays con .find(), .forEach() y .some()
+
+El método find () devuelve el primer valor que coincide de la colección. Una vez que coincida con el valor en los resultados, no verificará los valores restantes en la colección de matriz.
+
+El método filter () devuelve los valores coincidentes en una matriz de la colección. Verificará todos los valores de la colección y devolverá los valores coincidentes en una matriz.
+
+
+```js
+var articulos = [
+    { nombre: "Bici", costo: 3000 },
+    { nombre: "TV", costo: 2500 },
+    { nombre: "Libro", costo: 320 },
+    { nombre: "Celular", costo: 10000 },
+    { nombre: "Laptop", costo: 20000 },
+    { nombre: "Teclado", costo: 500 },
+    { nombre: "Audifonos", costo: 1700 },
+];
+
+//filter Genera un nuevo array
+var articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500; //articulos con precio menor a 500 pesos
+});
+
+//map Ayuda a mapear ciertos elementos de los articulos, es necesario generar nuevo array
+var nombreArticulos = articulos.map(function(articulo){
+    return articulo.nombre;
+});
+
+//find Ayuda a encontrar algo dentro del array articulos
+var encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "Laptop";
+});
+
+//forEach No es necesario generar nuevo array, se utiliza para realizar un recorrido de un array principal
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre);
+});
+
+//some Se genera nuevo array, regresa un condición en Boolean
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <= 700;
+});```
+```
+
+![](https://static.platzi.com/media/user_upload/download%20%2836%29-7282c92c-63b2-4787-b532-2f8baec30a15.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2837%29-50b88cbd-c0d3-4521-8535-90839b595f4e.jpg)
+![](https://static.platzi.com/media/user_upload/download%20%2838%29-52735e7b-4397-42ca-bb3f-103623f40980.jpg)
+![](https://static.platzi.com/media/user_upload/20-JS-c994e710-de79-4fbf-82f8-144f90aebd56.jpg)
+
+* https://www.w3schools.com/jsref/jsref_obj_array.asp
+
