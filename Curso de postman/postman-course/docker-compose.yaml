@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: tail -F anything
+    volumes:
+      - ./project:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
