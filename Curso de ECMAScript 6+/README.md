@@ -30,3 +30,15 @@ ECMAScript es la especificación del lenguaje JavaScript propuesto por ECMA Inte
 ![](https://static.platzi.com/media/user_upload/es8-ecebde83-3dfb-463d-bc7b-634fdfd3db7c.jpg)
 ![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES8-a9139c36e71c493c83c8dc39a46068b4-2020-07-20-02_11_38-5eca0fac-491d-481b-8f9f-17ddd27c3448.jpg)
 
+## Async Await
+
+* https://platzi.com/tutoriales/1789-asincronismo-js/5063-las-promesas-y-async-await-logicamente-no-son-iguales-y-te-explico-el-porque/
+
+![](https://static.platzi.com/media/user_upload/code-4f79f5be-29ee-4aaa-811d-f979f7775e36.jpg)
+![](https://static.platzi.com/media/user_upload/async-d87698c4-3ec4-4641-a7f8-c34226eae456.jpg)
+![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES8-a9139c36e71c493c83c8dc39a46068b4-2020-07-20-02_40_57-3d9252cd-b733-4168-9ada-9af2cf213c66.jpg)
+
+## ¿Qué se implementó en ES9?
+![](https://static.platzi.com/media/user_upload/es9-123c47e0-2616-4c47-a9ae-667a7c16edb1.jpg)
+![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES9-dbfdb7d8eb824cebb9c2c0422a30348e-2020-07-20-04_39_25-0e351bec-ce78-4c39-b9cd-08f90b1e3b5e.jpg)
+![](https://static.platzi.com/media/user_upload/factura-2430c226-66d6-4696-883e-0679a7137463.jpg)
