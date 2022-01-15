@@ -24,3 +24,9 @@ ECMAScript es la especificación del lenguaje JavaScript propuesto por ECMA Inte
 
 ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202021-12-31%20a%20la%28s%29%2017.01.29-178ff2d6-0f7c-4b13-a8b1-fda33e4d4078.jpg)
 ![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202021-12-31%20a%20la%28s%29%2017.02.01-4deba3a3-d486-4d45-93db-20700c1c0daf.jpg)
+
+## ¿Qué se implementó en ES8?
+
+![](https://static.platzi.com/media/user_upload/es8-ecebde83-3dfb-463d-bc7b-634fdfd3db7c.jpg)
+![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES8-a9139c36e71c493c83c8dc39a46068b4-2020-07-20-02_11_38-5eca0fac-491d-481b-8f9f-17ddd27c3448.jpg)
+
