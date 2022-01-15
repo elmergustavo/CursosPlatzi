@@ -42,3 +42,29 @@ ECMAScript es la especificación del lenguaje JavaScript propuesto por ECMA Inte
 ![](https://static.platzi.com/media/user_upload/es9-123c47e0-2616-4c47-a9ae-667a7c16edb1.jpg)
 ![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES9-dbfdb7d8eb824cebb9c2c0422a30348e-2020-07-20-04_39_25-0e351bec-ce78-4c39-b9cd-08f90b1e3b5e.jpg)
 ![](https://static.platzi.com/media/user_upload/factura-2430c226-66d6-4696-883e-0679a7137463.jpg)
+![](https://static.platzi.com/media/user_upload/C9-67833877-400f-4020-ac32-7116c4d1b84a.jpg)
+
+## ¿Qué se implementó en ES10?
+
+ES10
+
+    Array.prototype.flat(nivel_de_profundidad): un nuevo método que nos permite aplanar arreglos.
+    Array.prototype.flatMap() lo mismo que flat con el beneficio de que primero manipular la data para luego poder aplanar.
+    String.prototype.trimStart() | String.prototype.trimEnd() permite quitar los espacios al inicio o al final dependiendo de la funciona.
+    try/catch: ahora puedes utilizarlo sin necesidad de especificaro como catch(error) sino directamente usarlo en el scope del catch.
+    Object.fromEntries() lo inverso a Object.entries(), es decir podemos convertir un objeto en una matriz clave/valor con Object.entries(), y hace lo inverso es decir de una matriz clave/valor a un objeto con Object.fromEntries().
+    Symbol.prototype.description: permite regresar el descripcion opcional del Symbol
+    
+![](https://static.platzi.com/media/user_upload/es10-7c43b7ce-f0e5-4a94-a741-ea31d46b8eb8.jpg)
+![](https://static.platzi.com/media/user_upload/screencapture-notion-so-ES10-9df22aa9e2d342abba574bf2843200aa-2020-07-20-05_09_26-3171599f-85f7-46e6-a9b6-4391905617b9.jpg)
+![](https://static.platzi.com/media/user_upload/10-1-es10-array-flat-3d622513-0efb-4bcb-a521-f0970c3239f5.jpg)
+![](https://static.platzi.com/media/user_upload/10-2-es10-array-flatMap-1892b42d-a1c1-4e96-8381-4acf7d54e5d9.jpg)
+![](https://static.platzi.com/media/user_upload/10-2-es10-array-flatMap-resultado-0bd6fd1b-4e01-40e8-a4a5-feaed3663d0f.jpg)
+
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap
+
+## ECMAScript 2020
+
+## ECMAScript 2020 - características importantes
+
+
