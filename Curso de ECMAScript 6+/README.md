@@ -121,3 +121,71 @@ if(user?.profile?.email) {
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+## ECMAScript 2021
+
+```js
+// 🧯 Replace
+
+const string = "JavaScript es maravilloso, con JavaScript puedo crear el futuro de la web.";
+const replacedString = string.replace("JavaScript", "Python");
+console.log(replacedString);
+
+//// Output: Python es maravilloso, con JavaScript puedo crear el futuro de la web.
+
+const replacedString2 = string.replaceAll("JavaScript", "Python");
+console.log(replacedString2);
+
+//// Output: Python es maravilloso, con Python puedo crear el futuro de la web.
+
+// 🔒 Metodos privados
+class Message {
+    #show(val){ // Con el # convertimos al método en privado
+        console.log(val);
+    };
+};
+
+const message = new Message();
+message.show('Hola!');
+
+//  👽 Promise Any
+
+const promise1 = new Promise((resolve, reject) => reject("1"));
+const promise2 = new Promise((resolve, reject) => resolve("2"));
+const promise3 = new Promise((resolve, reject) => resolve("3"));
+
+Promise.any([promise1, promise2, promise3])
+    .then(response => console.log(response));
+
+
+//  🦴 WeakRef(element);
+
+class AnyClass {
+    constructor(element){
+        this.ref = new WeakRef
+    }
+    {...}
+}
+
+// 🧪 Nuevos operadores lógicos
+
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue &&= isFalse);
+
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue ||= isFalse);
+
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue &&= isFalse);
+```
+
+## TC39 y Cierre del curso
+
+![](https://static.platzi.com/media/user_upload/IMG_D9D082386FA8-1-4d43d884-0cfd-4645-9cf4-d6c030985704.jpg)
+![](https://static.platzi.com/media/user_upload/JavaScript%20ECMA-cb68fa75-9797-4604-bf0c-ad083aad6d3c.jpg)
+
+* https://tc39.es/
+* 
