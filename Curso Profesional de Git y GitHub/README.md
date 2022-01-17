@@ -30,6 +30,15 @@
 
 Un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo. Este tipo de sistemas nos permiten volver en el tiempo y salvar nuestro trabajo.
 
+![](https://static.platzi.com/media/user_upload/Que_es_Git-fce8cb7b-347d-4894-8454-0adf0ae6e0f7.jpg)
+
+* https://learngitbranching.js.org/?locale=es_AR
+
+![](https://static.platzi.com/media/user_upload/GIT%20GITHUB-21de2769-fd6c-4835-b078-04128276f16f.jpg)
+![](https://static.platzi.com/media/user_upload/Git-8d9b1bbd-6ab1-4532-8f5b-83f8c514e2c9.jpg)
+![](https://static.platzi.com/media/user_upload/sistema_control_versiones-fe530176-4ed8-44f6-9e16-b27b02e0b365.jpg)
+
+
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
