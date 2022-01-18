@@ -22,7 +22,7 @@ Formas de trabajar con los bits hay muchas, pero algunos conceptos importantes d
 
 ## Bit más significativo
 Los bits dentro de un byte poseen diferentes valores que van incrementando de acuerdo a su posición. El bit dentro de un byte con el valor más alto se le conoce como el bit más significativo o Most Significant Bit (MSB) por sus siglas en inglés. Este suele ser por convención el bit del extremo izquierdo.
-![]https://static.platzi.com/media/user_upload/imagen2-59efa6e0-9383-417a-a4da-ebd13f095756.jpg)
+![](https://static.platzi.com/media/user_upload/imagen2-59efa6e0-9383-417a-a4da-ebd13f095756.jpg)
 
 ## Valores de los bits en un byte
 De nada nos sirve saber cuál es el bit más significativo si no sabemos cuál es el valor de cada uno de estos bits. Ya que un bit solo puede tener dos valores, uno o cero, la forma de contar será a través de potencias de dos. El valor más pequeño estará en el extremo derecho comenzando con dos a la cero y terminando con el bit más significativo con el valor de dos a la siete.
