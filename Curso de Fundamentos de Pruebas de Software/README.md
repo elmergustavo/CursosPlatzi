@@ -228,6 +228,8 @@ y cada una de este tipo de industrias lleva diferentes tipos de pruebas
 
 No solo se deben implementar certificaciones en las empresas porque muchas veces esto no significa que cumplan con los estandares de calidad, se debe velar por cumplir y mantener estandares que promuevan el buen desarrollo de la empresa
 
+![](https://i.ibb.co/ChNkzXq/Screenshot-2020-10-30-124228.png)
+
 ## Clase 4 Ciclo de vida del software
 
 A lo largo del ciclo de vida del software se realizan distintas pruebas para garantizar que este cumpla con los requerimientos para los que fue diseñado y de la misma forma se encuentren procesos de mejora y optimización a medida que se desarrolla el software.
@@ -338,6 +340,14 @@ El tester podria ayudar a mejorar a encontrar las mejores herramientas a entende
 7. Expandimos las habilidades de testing y el conocimiento en todo el equipo; entendemos que esto reduce o elimina la necesidad de una especialista dedicado al testing.
 
 ![assets/img16.png](assets/img16.png)
+* http://www.ctestlabs.org/neoacm/1044_2009.pdf
+
+
+    Anomalia: la manifestación de un error en el software.
+    Error: una acción humana que produce un resultado incorrecto.
+    Defecto: imperfección o deficiencia e un producto, el cual no cumple sus requerimientos o especificaciones y necesita ser reparado o remplazado.
+    Fallo: el cese de la habilidad de un producto de cumplir una función requerida o su inhabilidad de funcionar dentro de márgenes previamente especificados.
+    Problema: dificultad o incertidumbre experimentada por una o más personas, como resultado de un encuentro insatisfactorio con el sistema usado.
 
 ## Clase 7 Especialidades del testing
 
