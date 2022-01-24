@@ -326,6 +326,68 @@ Conclusión: Lo mejor que puedes hacer para salvar tu puesto y evitar un incendi
 ![](https://static.platzi.com/media/user_upload/Git%20rm%20Git%20Reset-91d9ece5-b894-48ca-8102-f3bc9e91c5f1.jpg)
 ![](https://static.platzi.com/media/user_upload/4-90f7d57a-0d77-4afa-b69e-e45966c52a37.jpg)
 
+
+## Flujo de trabajo básico con un repositorio remoto
+
+No veas esta clase a menos que hayas practicado todos los comandos de las clases anteriores.
+
+Por ahora, nuestro proyecto vive únicamente en nuestra computadora. Esto significa que no hay forma de que otros miembros del equipo trabajen en él.
+
+Para solucionar esto están los servidores remotos: un nuevo estado que deben seguir nuestros archivos para conectarse y trabajar con equipos de cualquier parte del mundo.
+
+Estos servidores remotos pueden estar alojados en GitHub, GitLab, BitBucket, entre otros. Lo que van a hacer es guardar el mismo repositorio que tienes en tu computadora y darnos una URL con la que todos podremos acceder a los archivos del proyecto para descargarlos, hacer cambios y volverlos a enviar al servidor remoto para que otras personas vean los cambios, comparen sus versiones y creen nuevas propuestas para el proyecto.
+
+Esto significa que debes aprender algunos nuevos comandos:
+
+    git clone url_del_servidor_remoto: Nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git.
+    git push: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto.
+    git fetch: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto).
+    git merge: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo.
+    git pull: Básicamente, git fetch y git merge al mismo tiempo.
+
+![](https://static.platzi.com/media/user_upload/IMG_1349-895dac64-4cd9-4fc0-ac0e-cfac32291641.jpg)
+![](https://static.platzi.com/media/user_upload/ComandosEnGitGr%C3%A1ficos-7239105d-9a77-4925-bbe5-3ecd2ea5e55d.jpg)
+![](https://static.platzi.com/media/user_upload/Infograf%C3%ADa%201.1-44aabac2-3455-43c1-b469-f9ba55ccf850.jpg)
+![](https://static.platzi.com/media/user_upload/repositorios%20remotos-6ca8d4a1-0a44-4d76-9527-cde5dc64d58c.jpg)
+
+## Introducción a las ramas o branches de Git
+
+Las ramas son la forma de hacer cambios en nuestro proyecto sin afectar el flujo de trabajo de la rama principal. Esto porque queremos trabajar una parte muy específica de la aplicación o simplemente experimentar.
+
+La cabecera o HEAD representan la rama y el commit de esa rama donde estamos trabajando. Por defecto, esta cabecera aparecerá en el último commit de nuestra rama principal. Pero podemos cambiarlo al crear una rama (git branch rama, git checkout -b rama) o movernos en el tiempo a cualquier otro commit de cualquier otra rama con los comandos (git reset id-commit, git checkout rama-o-id-commit).
+
+![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-02-18%20a%20la%28s%29%2017.01.44-c4873db5-4330-4c63-8a79-d454a86123ff.jpg)
+![](https://static.platzi.com/media/user_upload/branch-828603f1-e475-4690-8a7e-95178d1a4db2.jpg)
+
+## Fusión de ramas con Git merge
+
+![](https://static.platzi.com/media/user_upload/Git%20y%20GitHub-1-efd7383d-2bba-4fad-b73f-00813a95efbc.jpg)
+
+* https://learngitbranching.js.org/
+
+El comando git merge nos permite crear un nuevo commit con la combinación de dos ramas (la rama donde nos encontramos cuando ejecutamos el comando y la rama que indiquemos después del comando).
+
+Crear un nuevo commit en la rama master combinando
+los cambios de la rama cabecera:
+git checkout master
+git merge cabecera
+
+Crear un nuevo commit en la rama cabecera combinando
+los cambios de cualquier otra rama:
+git checkout cabecera
+git merge cualquier-otra-rama
+
+Asombroso, ¿verdad? Es como si Git tuviera super poderes para saber qué cambios queremos conservar de una rama y qué otros de la otra. El problema es que no siempre puede adivinar, sobretodo en algunos casos donde dos ramas tienen actualizaciones diferentes en ciertas líneas en los archivos. Esto lo conocemos como un conflicto y aprenderemos a solucionarlos en la siguiente clase.
+
+Recuerda que al ejecutar el comando git checkout para cambiar de rama o commit puedes perder el trabajo que no hayas guardado. Guarda tus cambios antes de hacer git checkout.
+
+![](https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202020-02-18%20a%20la%28s%29%2017.01.52-cf53e246-188f-4932-a54e-3b156827b574.jpg)
+![](https://static.platzi.com/media/user_upload/fusion-65f6bb21-3bc3-4706-9810-6443a68b3c65.jpg)
+
+## Resolución de conflictos al hacer un merge
+
+
+
 ## Comandos colaborativos
 
 * `git shortlog -sn` muestra cuantos commit han hecho cada miembros del equipo.
