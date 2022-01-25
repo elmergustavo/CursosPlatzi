@@ -417,6 +417,64 @@ Sin embargo, esto solo funciona para las personas que quieren empezar a contribu
 ![](https://static.platzi.com/media/user_upload/github1-8a3f88c1-7c3c-4369-8171-9b97567f2203.jpg)
 ![](https://static.platzi.com/media/user_upload/clase-git-fd3b2601-4d88-4901-bf37-2cef9d730c82.jpg)
 
+## Cómo funcionan las llaves públicas y privadas
+![](https://static.platzi.com/media/user_upload/llavespublicaprivada-13a13a6c-f134-4ef5-aaa8-6ed680e68979.jpg)
+![](https://d20j05d0hyr158.cloudfront.net/img/89/minis/esquema-hibrido-cifrado.png)
+
+## Configura tus llaves SSH en local
+![](https://static.platzi.com/media/user_upload/llavesSSHlocal-fc37da8b-82e3-4122-ac7f-61877473e6cc.jpg)
+
+Primer paso: Generar tus llaves SSH. Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+
+```
+ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+```
+Segundo paso: Terminar de configurar nuestro sistema.
+
+En Windows y Linux:
+
+```
+# Encender el "servidor" de llaves SSH de tu computadora:
+eval $(ssh-agent -s)
+
+# Añadir tu llave SSH a este "servidor":
+ssh-add ruta-donde-guardaste-tu-llave-privada
+```
+En Mac:
+```
+# Encender el "servidor" de llaves SSH de tu computadora:
+eval "$(ssh-agent -s)"
+
+# Si usas una versión de OSX superior a Mac Sierra (v10.12)
+# debes crear o modificar un archivo "config" en la carpeta
+# de tu usuario con el siguiente contenido (ten cuidado con
+# las mayúsculas):
+Host *
+        AddKeysToAgent yes
+        UseKeychain yes
+        IdentityFile ruta-donde-guardaste-tu-llave-privada
+
+# Añadir tu llave SSH al "servidor" de llaves SSH de tu
+# computadora (en caso de error puedes ejecutar este
+# mismo comando pero sin el argumento -K):
+ssh-add -K ruta-donde-guardaste-tu-llave-privada
+```
+## Conexión a GitHub con SSH
+La creación de las SSH es necesario solo una vez por cada computadora.
+
+Luego de crear nuestras llaves SSH podemos entregarle la llave pública a GitHub para comunicarnos de forma segura y sin necesidad de escribir nuestro usuario y contraseña todo el tiempo.
+
+Para esto debes entrar a la Configuración de Llaves SSH en GitHub, crear una nueva llave con el nombre que le quieras dar y el contenido de la llave pública de tu computadora.
+
+Ahora podemos actualizar la URL que guardamos en nuestro repositorio remoto, solo que, en vez de guardar la URL con HTTPS, vamos a usar la URL con SSH:
+```
+git remote set-url origin url-ssh-del-repositorio-en-github
+```
+![](https://static.platzi.com/media/user_upload/apuntes-remoto-9079be14-dbce-454f-a4c2-32093075209b.jpg)
+![](https://static.platzi.com/media/user_upload/GitHubSSH-5a08c310-0ec5-49ca-9839-b983aa2d7d0d.jpg)
+![](https://static.platzi.com/media/user_upload/22.%20Conexi%C3%B3n%20a%20GitHub%20con%20SSH-48434a95-c29b-4f0b-b9a0-8650590b10a3.jpg)
+
+
 ## Comandos colaborativos
 
 * `git shortlog -sn` muestra cuantos commit han hecho cada miembros del equipo.
