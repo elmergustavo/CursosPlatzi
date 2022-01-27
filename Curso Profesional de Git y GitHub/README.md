@@ -474,6 +474,23 @@ git remote set-url origin url-ssh-del-repositorio-en-github
 ![](https://static.platzi.com/media/user_upload/GitHubSSH-5a08c310-0ec5-49ca-9839-b983aa2d7d0d.jpg)
 ![](https://static.platzi.com/media/user_upload/22.%20Conexi%C3%B3n%20a%20GitHub%20con%20SSH-48434a95-c29b-4f0b-b9a0-8650590b10a3.jpg)
 
+## Tags y versiones en Git y GitHub
+
+Los tags o etiquetas nos permiten asignar versiones a los commits con cambios más importantes o significativos de nuestro proyecto.
+
+Comandos para trabajar con etiquetas:
+
+    Crear un nuevo tag y asignarlo a un commit: git tag -a nombre-del-tag id-del-commit.
+    Borrar un tag en el repositorio local: git tag -d nombre-del-tag.
+    Listar los tags de nuestro repositorio local: git tag o git show-ref --tags.
+    Publicar un tag en el repositorio remoto: git push origin --tags.
+    Borrar un tag del repositorio remoto: git tag -d nombre-del-tag y git push origin :refs/tags/nombre-del-tag.
+![](https://static.platzi.com/media/user_upload/TagsGitHub-a359d67d-8860-434d-9eae-a86834459e9d.jpg)
+![](https://static.platzi.com/media/user_upload/tags-29352efa-78dd-4566-a3a4-7caea5ebcf20.jpg)
+
+## Manejo de ramas en GitHub
+
+
 
 ## Comandos colaborativos
 
