@@ -498,6 +498,17 @@ Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local 
 ![](https://static.platzi.com/media/user_upload/RamasGitHub-81d5ba0c-8102-4e49-ab5d-a4a2591462c1.jpg)
 ![](https://static.platzi.com/media/user_upload/code-6744aafd-5772-4caa-b7d4-2ac5878416aa.jpg)
 
+## Configurar múltiples colaboradores en un repositorio de GitHub
+
+Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear commits, ni ramas, ni nada.
+
+Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.
+
+Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Repositorio > Settings > Collaborators) y añadir el email o username de los nuevos colaboradores.
+
+![](https://static.platzi.com/media/user_upload/ConfigurarcolaboradoresGitHub-3b708021-a076-4d73-8cc1-1b66a3ffad9e.jpg)
+
+
 
 ## Comandos colaborativos
 
