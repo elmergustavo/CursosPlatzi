@@ -489,7 +489,14 @@ Comandos para trabajar con etiquetas:
 ![](https://static.platzi.com/media/user_upload/tags-29352efa-78dd-4566-a3a4-7caea5ebcf20.jpg)
 
 ## Manejo de ramas en GitHub
+Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca usas en el repositorio local. Lo importante es que aprendas a manejarlas para trabajar profesionalmente.
 
+    Crear una rama en el repositorio local: git branch nombre-de-la-rama o git checkout -b nombre-de-la-rama.
+    Publicar una rama local al repositorio remoto: git push origin nombre-de-la-rama.
+
+Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git usando el comando gitk.
+![](https://static.platzi.com/media/user_upload/RamasGitHub-81d5ba0c-8102-4e49-ab5d-a4a2591462c1.jpg)
+![](https://static.platzi.com/media/user_upload/code-6744aafd-5772-4caa-b7d4-2ac5878416aa.jpg)
 
 
 ## Comandos colaborativos
