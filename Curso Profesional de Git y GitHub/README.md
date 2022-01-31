@@ -699,6 +699,23 @@ log --> para los commits.
   
 ![](https://static.platzi.com/media/user_upload/38.gitgrep-91e4368f-580b-4d90-8d2f-628d0b76089a.jpg)
 
+## Comandos y recursos colaborativos en Git y GitHub
+* https://git-scm.com/docs/git-blame
+
+
+    git shortlog -sn = muestra cuantos commit han hecho cada miembros del equipo.
+    git shortlog -sn --all = muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado
+    git shortlog -sn --all --no-merge = muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges
+    git blame ARCHIVO = muestra quien hizo cada cosa linea por linea
+    git COMANDO --help = muestra como funciona el comando.
+    git blame ARCHIVO -Llinea_inicial,linea_final= muestra quien hizo cada cosa linea por linea indicándole desde que linea ver ejemplo -L35,50
+    **git branch -r **= se muestran todas las ramas remotas
+    git branch -a = se muestran todas las ramas tanto locales como remotas
+
+![](https://static.platzi.com/media/user_upload/39.RecursosGitGitHub-e849c3e6-279e-490e-a65d-308e062ddd18.jpg)
+![](https://static.platzi.com/media/user_upload/42.%20Comandos%20y%20recursos%20colaborativos%20en%20Git%20y%20GitHub-6de1ba21-6cb4-49d1-b148-cb98ea2a2727.jpg
+
+
 
 
 
@@ -860,3 +877,13 @@ Interfaz de escritorio en desktop.github.com para que puedas trabajar gráficame
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
+
+## Tu futuro con Git y GitHub
+
+¡Felicitaciones por terminar el Curso profesional de Git y GitHub!
+
+Aprendimos cómo usar Git y GitHub, hacer merge request, investigar quién hizo qué a través de la línea de comandos, cómo utilizar GitHub Pages, cómo revertir cambios y mucho más. Ahora queda de tu parte experimentar, fallar, subir, borrar y por último hacer deploy de tu proyecto y compartirlo con la comunidad.
+
+Recuerda resolver los ejercicios, completar el examen, darle 5 estrellas al profesor y compartir tu proyecto, notas, todas tus dudas y comentarios en la sección de discusiones.
+
+
