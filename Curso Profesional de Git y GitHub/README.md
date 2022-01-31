@@ -508,6 +508,52 @@ Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Re
 
 ![](https://static.platzi.com/media/user_upload/ConfigurarcolaboradoresGitHub-3b708021-a076-4d73-8cc1-1b66a3ffad9e.jpg)
 
+## Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master
+
+![](https://static.platzi.com/media/user_upload/23.Flujotrabajoprofesional-54e182a6-c2f1-43f8-a226-c35f623db8cd.jpg)
+![](https://static.platzi.com/media/user_upload/26.%20Flujo%20de%20trabajo%20profesional%20Haciendo%20merge%20de%20ramas%20de%20desarrollo%20a%20master-b2a72165-d04b-4470-84cd-f42b75cd4a76.jpg)
+![](https://static.platzi.com/media/user_upload/26.1%20Flujo%20de%20trabajo%20profesional%20Haciendo%20merge%20de%20ramas%20de%20desarrollo%20a%20master-7cb51182-f0c4-413e-a077-f9a305b54f81.jpg)
+![](https://static.platzi.com/media/user_upload/merge_from_ofoct-2-2b236114-03e1-42ad-a168-b2e82f908c4d.jpg)
+
+## Flujo de trabajo profesional con Pull requests
+
+En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review y luego de su aprobación se unen códigos con los llamados merge request.
+
+Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan a el servidor de producción con el ya antes mencionado merge request.
+
+![](https://static.platzi.com/media/user_upload/PullRequest-76172542-d2a2-4654-9fab-f74cfe34bde1.jpg)
+
+## Utilizando Pull Requests en GitHub
+
+![](https://static.platzi.com/media/user_upload/utilizando_pullrequest_github-e5832064-6d33-45c4-b3ae-2c4f7cd4400f.jpg)
+![](https://static.platzi.com/media/user_upload/GIT-1d399b0e-8b48-4a41-b22d-4890be66d971.jpg)
+
+## Creando un Fork, contribuyendo a un repositorio
+
+Forks o Bifurcaciones
+
+Es una característica única de GitHub en la que se crea una copia exacta del estado actual de un repositorio directamente en GitHub, éste repositorio podrá servir como otro origen y se podrHaciendo deployment a un servidor
+
+![](https://static.platzi.com/media/user_upload/30.%20Haciendo%20deployment%20a%20un%20servidor-1c1f291b-8001-4011-950a-6f298d971ac6.jpg)
+á clonar (como cualquier otro repositorio), en pocas palabras, lo podremos utilizar como un git cualquiera
+.
+Un fork es como una bifurcación del repositorio completo, tiene una historia en común, pero de repente se bifurca y pueden variar los cambios, ya que ambos proyectos podrán ser modificados en paralelo y para estar al día un colaborador tendrá que estar actualizando su fork con la información del original.
+.
+Al hacer un fork de un poryecto en GitHub, te conviertes en dueñ@ del repositorio fork, puedes trabajar en éste con todos los permisos, pero es un repositorio completamente diferente que el original, teniendo alguna historia en común.
+.
+Los forks son importantes porque es la manera en la que funciona el open source, ya que, una persona puede no ser colaborador de un proyecto, pero puede contribuír al mismo, haciendo mejor software que pueda ser utilizado por cualquiera.
+.
+Al hacer un fork, GitHub sabe que se hizo el fork del proyecto, por lo que se le permite al colaborador hacer pull request desde su repositorio propio.
+Trabajando con más de 1 repositorio remoto
+
+Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork) es muy probable que desees poder trabajar con ambos repositorios, para ésto puedes crear un remoto adicional desde consola.
+
+![](https://static.platzi.com/media/user_upload/ForkGithub-e204da31-9898-4739-a954-53a4cea1192f.jpg)
+
+## Haciendo deployment a un servidor
+
+![](https://static.platzi.com/media/user_upload/30.%20Haciendo%20deployment%20a%20un%20servidor-1c1f291b-8001-4011-950a-6f298d971ac6.jpg)
+
 
 
 ## Comandos colaborativos
