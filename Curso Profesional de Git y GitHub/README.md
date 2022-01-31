@@ -578,6 +578,14 @@ Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la ed
 
 ![](https://static.platzi.com/media/user_upload/Readmemd-52ba4cf8-f6d4-45ff-bb23-646a3bb26c3d.jpg)
 
+## Tu sitio web público con GitHub Pages
+GitHub tiene un servicio de hosting gratis llamado GitHub Pages, tu puedes tener un repositorio donde el contenido del repositorio se vaya a GitHub y se vea online.
+
+Publica tu página en GitHub Pages y compártelo con la comunidad en el área de discusiones de la clase, ¡te esperamos!
+
+* https://pages.github.com/
+
+
 
 
 ## Comandos colaborativos
