@@ -554,6 +554,12 @@ Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (no
 
 ![](https://static.platzi.com/media/user_upload/30.%20Haciendo%20deployment%20a%20un%20servidor-1c1f291b-8001-4011-950a-6f298d971ac6.jpg)
 
+## Ignorar archivos en el repositorio con .gitignore
+No todos los archivos que agregas a un proyecto deberían ir a un repositorio, por ejemplo cuando tienes un archivo donde están tus contraseñas que comúnmente tienen la extensión .env o cuando te estás conectando a una base de datos; son archivos que nadie debe ver.
+
+![](https://static.platzi.com/media/user_upload/gitignore-15c75358-d56b-401b-9790-2ad31f9d0090.jpg)
+
+
 
 
 ## Comandos colaborativos
@@ -566,6 +572,7 @@ Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (no
 * `git blame [archivo] -L[linea_inicial],[linea_final]` muestra quién hizo cada cosa linea por linea indicándole desde qué linea ver. Ejemplo `-L35,50`
 
 ## Configuraciones de Github
+
 
 ### Notificaciones
 
