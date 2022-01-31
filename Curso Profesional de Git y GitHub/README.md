@@ -546,7 +546,16 @@ Los forks son importantes porque es la manera en la que funciona el open source,
 Al hacer un fork, GitHub sabe que se hizo el fork del proyecto, por lo que se le permite al colaborador hacer pull request desde su repositorio propio.
 Trabajando con más de 1 repositorio remoto
 
-Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork) es muy probable que desees poder trabajar con ambos repositorios, para ésto puedes crear un remoto adicional desde consola.
+Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork) es muy probable que desees poder trabajar con ambos repositorios, para ésto pue
+
+README.md es una excelente práctica en tus proyectos, md significa Markdown, que es una especie de código que te permite cambiar la manera en que se ve un archivo de texto.
+
+Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la edición en Wikipedia; es un lenguaje intermedio que no es HTML, no es texto plano, es una manera de crear excelentes texto formateados.
+
+* https://pandao.github.io/editor.md/en.html
+* 
+* ![](https://static.platzi.com/media/user_upload/Readmemd-52ba4cf8-f6d4-45ff-bb23-646a3bb26c3d.jpg)
+des crear un remoto adicional desde consola.
 
 ![](https://static.platzi.com/media/user_upload/ForkGithub-e204da31-9898-4739-a954-53a4cea1192f.jpg)
 
@@ -559,6 +568,15 @@ No todos los archivos que agregas a un proyecto deberían ir a un repositorio, p
 
 ![](https://static.platzi.com/media/user_upload/gitignore-15c75358-d56b-401b-9790-2ad31f9d0090.jpg)
 
+## Readme.md es una excelente práctica
+
+README.md es una excelente práctica en tus proyectos, md significa Markdown, que es una especie de código que te permite cambiar la manera en que se ve un archivo de texto.
+
+Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la edición en Wikipedia; es un lenguaje intermedio que no es HTML, no es texto plano, es una manera de crear excelentes texto formateados.
+
+* https://pandao.github.io/editor.md/en.html
+
+![](https://static.platzi.com/media/user_upload/Readmemd-52ba4cf8-f6d4-45ff-bb23-646a3bb26c3d.jpg)
 
 
 
