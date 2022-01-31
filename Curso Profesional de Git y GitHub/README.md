@@ -586,6 +586,24 @@ Publica tu página en GitHub Pages y compártelo con la comunidad en el área de
 * https://pages.github.com/
 
 
+## Tu sitio web público con GitHub Pages
+GitHub tiene un servicio de hosting gratis llamado GitHub Pages, tu puedes tener un repositorio donde el contenido del repositorio se vaya a GitHub y se vea online.
+
+Publica tu página en GitHub Pages y compártelo con la comunidad en el área de discusiones de la clase, ¡te esperamos!
+
+![](https://static.platzi.com/media/user_upload/31.GitHubPages-3d03b928-fab8-4cd5-b3d4-c6d2e8c13a1b.jpg)
+
+## Git Rebase: reorganizando el trabajo realizado
+
+El comando rebase es una mala práctica, nunca se debe usar, pero para efectos del curso te lo vamos a enseñar para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
+
+# Cambiamos a la rama que queremos traer los cambios
+git checkout experiment
+# Aplicamos rebase para traer los cambios de la rama que queremos 
+git rebase master
+
+![](https://static.platzi.com/media/user_upload/GitRebase-fc10baaa-a774-420f-b466-32e63bee6b1f.jpg)
+![](https://static.platzi.com/media/user_upload/Capture-2030bd75-c87a-463e-b45b-49359bb02eac.jpg)
 
 
 ## Comandos colaborativos
