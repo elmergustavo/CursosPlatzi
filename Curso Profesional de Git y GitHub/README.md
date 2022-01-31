@@ -597,13 +597,83 @@ Publica tu página en GitHub Pages y compártelo con la comunidad en el área de
 
 El comando rebase es una mala práctica, nunca se debe usar, pero para efectos del curso te lo vamos a enseñar para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
 
-# Cambiamos a la rama que queremos traer los cambios
+## Cambiamos a la rama que queremos traer los cambios
 git checkout experiment
-# Aplicamos rebase para traer los cambios de la rama que queremos 
+## Aplicamos rebase para traer los cambios de la rama que queremos 
 git rebase master
 
 ![](https://static.platzi.com/media/user_upload/GitRebase-fc10baaa-a774-420f-b466-32e63bee6b1f.jpg)
 ![](https://static.platzi.com/media/user_upload/Capture-2030bd75-c87a-463e-b45b-49359bb02eac.jpg)
+
+
+## Git Stash: Guardar cambios en memoria y recuperarlos después
+Cuando necesitamos regresar en el tiempo porque borramos alguna línea de código pero no queremos pasarnos a otra rama porque nos daría un error ya que debemos pasar ese “mal cambio” que hicimos a stage, podemos usar git stash para regresar el cambio anterior que hicimos.
+
+git stash es típico cuando estamos cambios que no merecen una rama o no merecen un rebase si no simplemente estamos probando algo y luego quieres volver rápidamente a tu versión anterior la cual es la correcta.
+
+git stash : Guarda el trabajo actual de manera temporal. (Archivos modificados o eliminados)
+git stash -u : Crea un stash con todos los archivos. (Añadiendo los creados Untracked)
+git stash save “mensaje” : Crea un stash con el mensaje especificado.
+git stash list : Permite visualizar todos los stash existentes.
+git stash clear : Elimina todos los stash existentes.
+git stash drop : Elimina el stash más reciente. El que tiene num_stash=0.
+git stash drop stash@{num_stash} : Elimina un stash específico.
+git stash apply : Aplica el stash más reciente. El que tiene num_stash=0.
+git stash apply stash@{num_stash} : Aplica los cambios de un stash específico.
+git stash pop : Aplica el stash más reciente y lo elimina. El que tiene num_stash=0.
+git stash pop stash@{num_stash} : Aplica los cambios de un stash específico y elimina lo stash.
+git stash branch nombre_de_rama : Crea una rama y aplica el stash mas reciente.
+git stash branch nombre_de_rama stash@{num_stash} : Crea una rama y aplica el stash especificado.
+
+Consideraciones:
+
+    El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
+    Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u.
+    Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
+
+
+![](https://static.platzi.com/media/user_upload/33.GitStash-7dd87e43-a175-4f2c-8a97-8c0707f08824.jpg)
+
+## Git Clean: limpiar tu proyecto de archivos no deseados
+
+A veces creamos archivos cuando estamos realizando nuestro proyecto que realmente no forman parte de nuestro directorio de trabajo, que no se deberían agregar y lo sabemos.
+
+    Para saber qué archivos vamos a borrar tecleamos git clean --dry-run
+    Para borrar todos los archivos listados (que no son carpetas) tecleamos git clean -f
+
+
+![](https://static.platzi.com/media/user_upload/34.GitClean-28f1b589-4c33-40b0-9a2e-5c7601e140e2.jpg)
+
+## Git cherry-pick: traer commits viejos al head de un branch
+
+Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.
+
+cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado.
+
+![](https://static.platzi.com/media/user_upload/35.GitCherryPick-0cba0731-ff3d-4423-9059-22d80feabb63.jpg)
+![](https://static.platzi.com/media/user_upload/GIT-69562e91-600d-4ec0-b4d4-6e10165ab18d.jpg)
+
+## Reconstruir commits en Git con amend
+
+A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos los agregará al commit anterior.
+
+![](https://static.platzi.com/media/user_upload/36.GitAmend-184be9ad-e025-43a0-b647-5ce23b442455.jpg)
+
+## Git Reset y Reflog: úsese en caso de emergencia
+
+¿Qué pasa cuando todo se rompe y no sabemos qué está pasando? Con git reset HashDelHEAD nos devolveremos al estado en que el proyecto funcionaba.
+
+    git reset --soft HashDelHEAD te mantiene lo que tengas en staging ahí.
+    git reset --hard HashDelHEAD resetea absolutamente todo incluyendo lo que tengas en staging.
+
+git reset es una mala práctica, no deberías usarlo en ningún momento; debe ser nuestro último recurso.
+
+![](https://static.platzi.com/media/user_upload/37.gitReflog-ad7423e8-f1de-43a4-9994-4ad27fd9d481.jpg)
+
+## Buscar en archivos y commits de Git con Grep y log
+
+
+
 
 
 ## Comandos colaborativos
