@@ -673,6 +673,32 @@ git reset es una mala práctica, no deberías usarlo en ningún momento; debe se
 ## Buscar en archivos y commits de Git con Grep y log
 
 
+A medida que nuestro proyecto se hace grande vamos a querer buscar ciertas cosas.
+
+Por ejemplo: ¿cuántas veces en nuestro proyecto utilizamos la palabra color?
+
+Para buscar utilizamos el comando git grep color y nos buscará en todo el proyecto los archivos en donde está la palabra color.
+
+    Con git grep -n color nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.
+    Con git grep -c color nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.
+    Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con git grep -c "<p>".
+
+git grep color -->use la palabra color
+git grep la --> donde use la palabra la
+git grep -n color–> en que lineas use la palabra color
+git grep -n platzi --> en que lineas use la palabra platzi
+git grep -c la --> cuantas veces use la palabra la
+git grep -c paltzi --> cuantas veces use la palabra platzi
+git grep -c “<p>”–> cuantas veces use la etiqueta <p>
+
+git log-S “cabecera” --> cuantas veces use la palabra cabecera en
+todos los commits.
+
+grep–> para los archivos
+log --> para los commits.
+  
+![](https://static.platzi.com/media/user_upload/38.gitgrep-91e4368f-580b-4d90-8d2f-628d0b76089a.jpg)
+
 
 
 
