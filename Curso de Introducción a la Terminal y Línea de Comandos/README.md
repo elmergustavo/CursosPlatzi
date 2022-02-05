@@ -48,3 +48,113 @@ rm -rf /home/tuUsuario/carpetaAEliminar/
 
 Aquí ese espacio no existe, por lo que todo iría bien, quiero que te fijes cómo con un pequeño error, puedes eliminar todo. Por esom siempre ten cuidado al usar este comando, y de preferencia… ¡Usa el modo interactivo! 😄
 
+
+Mostrar información del directorio:
+ls :Lista el contenido de los directorios (por defecto ordena la salida alfabéticamente).
+
+Alguna de sus opciones (argumentos) más útiles son:
+
+-a :todos los archivos, incluso los que comienzan con punto (.).
+
+-A :Lista todos los ficheros en los directorios, excepto los que comienzan con punto . (.) y los que comienzan con doble punto (…).
+
+-F :indica tipo: / directorio, * ejecutable, @ enlace simbólico.
+
+-h :indicará el tamaño en KB, MB, etc.
+
+-l :listado en formato largo (o detallado).
+
+-S :clasifica los contenidos de los directorios por tamaños, con los ficheros más grandes en primer lugar.
+
+-r :invierte el orden de la salida.
+
+-R :Lista recursivamente los subdirectorios encontrados.
+
+-t :ordenar por fecha de última modificación.
+
+-u :ordenar por fecha de último acceso.
+
+-x :presenta los ficheros por columnas.
+
+-i :precede la salida con el número de i-node
+
+ejemplos:
+
+ls -lt	:muestra los archivos del mas actual al mas antiguo
+
+ls -ltr	:muestra los archivos del mas antiguo al mas actual
+
+ls -lh	:muestra de forma mas legible el tamaño de los archivos
+
+ls -lhS	:muestra de forma ordenada los archivos por su tamaño
+
+ls -la :muestra los atributos de los archivos y los archivos ocultos
+
+Manipular archivos
+
+    mkdir <nombre_directorio>: crea un directorio también puedes añadir la ruta
+
+    touch: crea un archivo, si no indicas la extension por defecto sera .txt
+
+    cp <archivo> <ruta>: nos permite duplicar archivos, para duplicar directorios con su contenido añadir el modificador -r que indica recursividad
+
+    mv <archivo> <ruta> : mover un archivo hacia un directorio. También se usa para renombrar archivos mv <archivo> <nuevo nombre> no olvidar la extension del archivo
+    Para mover directorios añadir el modificador -r
+
+    rm: elimina archivos, con -i indica un mensaje de confirmación en consola para tener mas control sobre la elección de que archivos queremos eliminar. Para eliminar un directorio añadir -r y -ri para usar el mensaje de confirmación
+
+
+
+    ls -la muestra TODOS los archivos
+    ls -lS ordena los documentos del por tamaño de peso, el más pesado va arriba de todos
+    ls -lr ordena de menos pesado a más pesado
+    mkdir nombreCarpeta crea una carpeta con su nombre
+    touch nombreArchivo crea un archivo
+    cp nombreArchivo nombreNuevo copia un archivo y crea otro
+    mv archivo directorio mueve un archivo hacía el directorio indicado
+    mv nombreArchivo nombreArchivoNuevo reemplaza el nombre de un archivo por otro ``nombre
+    rm archivo COMANDO PELIGROSO borra totalmente de la existencia a un archivo
+    rm -i archivo Aquí nos hará una pregunta para confirmar si en verdad queremos eliminar un archivo
+    rm -ri Elimina directorio con sus archivos internos
+    rm -rf COMANDO SUPER PELIGROSO va a borrar TODO sin importar nada, NO SE RECOMIENDA USARLO
+
+## Explorando el contenido de nuestros archivos
+
+## Principios de usabilidad y Heurística:
+
+1. **Visibilidad del estado del sistema:** el usuario debería saber que  está pasando en cada interacción con el producto (cargando, guardando,  errores). Debe recibir un feedback del estado del producto.
+
+   
+
+2.  **Relación producto y mundo real:** El usuario no debería tener dudas al  momento de interactuar con el sistema, se le debe brindar toda la  información para que pueda operar el sistema.
+
+   
+
+3.  **Control y libertad del usuario**: El usuario debe poder cancelar o salir de un proceso, sin finalizarlo y sin compromisos.
+
+   
+
+4. **Consistencia:** En el diseño de los bloques visuales del flujo del  sistema, tratar de llevar un patrón en todos los elementos del sistema.
+
+   
+
+5. **Prevención de errores:** Proveer instrucciones claras de lo que se espera que el usuario realice dentro de nuestro producto.
+
+   
+
+6. **Reconocer antes de recordar:** Entregar información valiosa al usuario y ademas proveer una forma en que el usuario pueda revisarla cuando la  necesite sin acudir a su memoria.
+
+   
+
+7. **Flexibilidad y eficiencia de uso:** Entregar una interfaz capaz de  satisfacer a usuarios avanzados y no avanzados. Permitir el uso del  producto sin necesidad de conocimientos especializados.
+
+8. **Diseño estético y minimalista:** no saturar de contenido al usuario,  mostrar únicamente el contenido relevante para cada vista o cada acción  que el usuario ha decidido acceder. No poner elementos que distraigan al usuario del objetivo de la vista.
+
+   
+
+9. **Ayudar al usuario a reconocer y corregir errores:** Dar información al  usuario de lo que esta generando errores o inconsistencias en el  sistema.
+
+   
+
+10. **Ayuda y documentación:** Detectar las dudas mas comunes de los  usuarios a la hora de usar nuestro producto y proveer información que  pueda resolverlas de manera inmediata.
+
