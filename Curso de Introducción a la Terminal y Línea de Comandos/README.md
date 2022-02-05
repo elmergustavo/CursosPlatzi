@@ -158,3 +158,30 @@ Manipular archivos
 
 10. **Ayuda y documentación:** Detectar las dudas mas comunes de los  usuarios a la hora de usar nuestro producto y proveer información que  pueda resolverlas de manera inmediata.
 
+Explorando el contenido de nuestro archivos.
+
+    Podemos explorar el contenido de archivos sin la necesidad de abrirlos, desde la terminal 🧐. Esto para archivos de texto.
+    head <documento de texto>: Nos muestra las primeras 10 líneas de un archivo de texto. Para especificar el número de líneas head -n <numero de lineas> <archivo>
+    tail <documento>: Nos muestra las últimas 10 líneas.
+    less <archivo>: Este es muy cool, es muy interactivo, nos permite hacer scroll, y nos permite hacer búsquedas haciendo /<palabra a buscar>. Para salir presionamos q 🔍.
+    xdg-open <archivo>: Para abrir un archivo desde la terminal. Usa las aplicaciones predeterminadas. Esto para linux, para mac, es open. Esto crea un proceso en la terminal que no nos dejará hacer nada mas. Para terminar el proceso ctrl+c.
+    nautilus nos permite abrir el explorador de archivos en una posición dada (en linux) 📁.
+
+
+    rm -r dir2 dir3 mi_directorio, para borrar múltiples archivos de manera rápida.
+
+    head archivo, para mostrar las primeras 10 líneas del archivo.
+    ○ head archivo -n 15, para modificar el número de líneas a mostrar.
+
+    tail archivo, para mostrar las últimas 10 líneas del archivo.
+    ○ tail archivo -n 15, para modificar el número de las últimas líneas a mostrar.
+
+    less archivo, muestra una interfaz con todo el archivo, se puede hacer scroll, moverse con las flechas o con la barra espaciadora. Con el “/” seguido de una palabra que se quiere buscar. Para salir solo se presiona “q”.
+    • code archivo/wslview archivo, para abrir el archivo con VS desde la terminal.
+
+    Ctrl + c, para matar procesos que se estén ejecutando en la terminal.
+
+    explorer.exe., (windows) para mostrar donde estamos para en el explorador de archivos.
+
+![](https://static.platzi.com/media/user_upload/5-ab8fbaff-9ef7-45f3-a008-b62fa54344a1.jpg)
+
