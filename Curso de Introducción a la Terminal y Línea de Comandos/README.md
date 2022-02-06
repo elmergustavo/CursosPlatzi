@@ -185,3 +185,112 @@ Explorando el contenido de nuestro archivos.
 
 ![](https://static.platzi.com/media/user_upload/5-ab8fbaff-9ef7-45f3-a008-b62fa54344a1.jpg)
 
+## ¿Qué es un comando?
+Un comando puede ser 4 cosas:
+
+    Un programa ejecutable: que se compilo en algun lenguaje de programación y se puede ejecutar
+
+
+    Un comando de utilidad de la shell.
+
+    Una función de shell
+
+    Un alias
+
+Comandos
+
+    type nos permite saber que clase es un comando. Por ejemplo type cd (es una funcion de shell), ls (es un alias)
+
+    Para crear un alias: alias ‘nombreDelAlias’ = ‘comandoQueInvoca’. Por ejemploalias l=”ls -lh”. Temporales, por el momento.
+
+    Con –help o help, puedes tener una ayuda sobre los comandos.
+
+    man ‘comando’ : hace referencia al manual de usuario de un comando, otro similar es informático
+
+    whatis ‘comando’ : nos da una descripcion muy corta de que hace ese comando. Pero no funciona con todos.
+
+## Wildcards
+Las wildcards nos sirven para realizar seccionamiento de archivos o directorios, ademas de ls los wildcards tambien pueden usarse con cualquier comando que realize la manipulacion de archivos como mv, cp y rm. En este ejemplo yo movi todos los archivo .py hacia una carpeta
+
+Algo importante a aclarar es que el asterisco * significa cualquier STRING o cadena de texto, entonces si ponemos ls *.txt cualquier archivo .txt se listará.
+.
+Y el signo de interrogación ? significa que ese último dato puede ser cualquier arbitrario, pero sólo ese último.
+.
+
+Entonces en resumen, el * se expande de 0 a más caracteres, mientras que ? expande a uno exactamente.
+
+Wildcard
+
+💡Alternativamente llamado como wild character o wildcard character.
+.
+Definición
+
+    Son un símbolo usado para remplazar o representar uno más caracteres donde comúnmente se utiliza el * .
+
+.
+Tipos de wildcards
+
+    % - Usado en SQL para relacionar más de un caracteres 0 o más veces.
+    * - Relaciona cualquier carácter 0 o más veces.
+    ? - Para relacionar un caracter una vez.
+    [ ] - Realizamos relaciones a través de expresiones regular.
+
+Cabe mencionar que los wildcard, pueden ser utilizar como prefijo o postfijo:
+# prefijo
+dir *.mp3
+# postfijo
+dir main.*
+
+![](https://user-images.githubusercontent.com/42653934/152705742-881918f9-f9ee-4bd8-9c34-f386f29b6a24.png)
+
+## Redirecciones: cómo funciona la shell
+Independiente del lenguaje, cualquier programa tiene un flujo de entrada de datos “STANDAR INPUT” = “<”, un flujo de salida “STANDAR OUTPUT” = “>” o “1>” y un modo de capturar errores “STANDAR ERROR” = “2>”. En la terminal, podemos tener este mismo flujo de datos gracias a: “<” , “>” y “2>”.
+TIP: esto es muy utilizado en los logs para definir los estados: [“ok”, “warning”, “error”].
+.
+Es muy importante recordar que el uso del redireccionamento “STANDAR OUTPUT” = “>” hacia un archivo hace que se borre todo su contenido y se guarde el actual “STANDAR OUTPUT”, si quieres que no se borre la información actual del archivo, tendrías que agregar un doble “STANDAR OUTPUT” por ejemplo:
+echo “hola, mundo!” > día.txt
+echo “buenas tardes, mundo!” > día.txt
+echo “buenas noches, mundo!” >> día.txt
+cat día.txt
+buenas tardes, mundo!
+Buenas noches, mundo!
+
+* https://www.linuxtotal.com.mx/index.php?cont=redireccionamiento-en-linux
+
+## Redirecciones: pipe operator
+
+¡Los pipe operators de Linux son de lo mejor! En serio puedes hacer cosas muy increíbles con ellos. Por ejemplo, yo llegué a hacer un comando super poderoso que me consultaba todos los archivos que tenía guardados en Amazon S3 y me los ponía en varias líneas ordenaditos (porque Amazon te los devuelve con demasiada información desordenada), es más aquí se los enseño (no te asustes por esto, es algo un poquito avanzado, pero quiero que veas cómo usando pipe operators puedes hacer cosas increíbles):
+
+aws s3 ls s3://$BUCKET --recursive | awk '{print $4}' | awk -F/ '{print $NF}'
+
+Aquí uso el comando awk (uno de los comandos que ya te expliqué en otra clase 👀). Claro, no necesitas llegar a hacer cosas complejas para usar pipe operators, puedes hacer cosas sencillas, por ejemplo, buscar tus paquetes instalados en tu computadora y filtrar por alguno específico:
+![](https://user-images.githubusercontent.com/42653934/152706538-9e5f83b5-e3a3-4205-9c68-f355bbe5ff4a.png)
+
+Pipe operator |
+
+💡Los filtros son el procesos de tomar una entrada de flujo y, realizando una conversión, es mandado a la salida de otro stream.
+.
+Definición
+
+    Un pipeline sirve en la construcción de comandos para generar filtros.
+
+.
+Pipeline stdout a stdin
+
+Usamos el operado pipe | entre dos comando para direccionar el stdout del primero con el stdin del segundo. Cualquier comando, entre pipes, puede tener opciones o argumentos para construir filtros complejos.
+
+Una de las ventajas de los pipes, en Linux y UNIX, es de que pueden variar y generar salidas intermedias de diferentes procesos, generando todo un trace de flujo de información.
+
+Redirecciones: pipe operator.
+
+    Es uno de los operadores mas útiles que existen, ya que nos permite poner varios comandos, tales que la salida de uno es la entrada del siguiente 📤.
+    echo <texto> genera un stdout con el texto que tenemos.
+    cat <archivo1> <archivo2> muestra los dos archivos concatenados 💩.
+    El pipe operator | hace que el stdout de un comando sea el stdin de otro comando. Por ejemplo ls -lh | less
+    tee hace algo parecido a >, pero dentro de los pipe´s, por ejemplo ls -lh | tee output.txt |less . Se puede poner en medio, pero se ignora porque se sigue pasando.
+    cowsay "Texto" es un comando que imprime una vaca que dice algo JAJAJAJAJ 🐮.
+
+## Encadenando comandos: operadores de control
+
+
+
