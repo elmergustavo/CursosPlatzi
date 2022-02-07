@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Introducción a la Terminal y Línea de Comandos</h1>
-    <img src="readme_img/terminal.png" width="">
+    <img src="https://static.platzi.com/media/achievements/badge-terminal-5c5518b5-43d0-4387-b39e-3d85db446c5f.png" width="">
 </div>
 
 ## Introducción al documento
